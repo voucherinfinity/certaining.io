@@ -1,0 +1,1009 @@
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style type="text/css">
+		/* ============ desktop view ============ */
+		@media all and (min-width: 992px) {
+
+			.dropdown-menu li {
+				position: relative;
+			}
+
+			.dropdown-menu .submenu {
+				display: none;
+				position: absolute;
+				left: 100%;
+				top: -7px;
+			}
+
+			.dropdown-menu .submenu-left {
+				right: 100%;
+				left: auto;
+			}
+
+			.dropdown-menu>li:hover {
+				background-color: #f1f1f1
+			}
+
+			.dropdown-menu>li:hover>.submenu {
+				display: block;
+			}
+		}
+
+		/* ============ desktop view .end// ============ */
+
+		/* ============ small devices ============ */
+		@media (max-width: 991px) {
+			.dropdown-item:hover>.submenu {
+				display: block;
+			}
+
+			.dropdown-menu .dropdown-menu {
+				margin-left: 0.7rem;
+				margin-right: 0.7rem;
+				margin-bottom: .5rem;
+			}
+
+		}
+
+		/* ============ small devices .end// ============ */
+	</style>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll('.dropdown-menu').forEach(function (element) {
+				element.addEventListener('click', function (e) {
+					e.stopPropagation();
+				});
+			})
+			if (window.innerWidth < 992) {
+
+				// close all inner dropdowns when parent is closed
+				document.querySelectorAll('.navbar .dropdown').forEach(function (everydropdown) {
+					everydropdown.addEventListener('hidden.bs.dropdown', function () {
+						// after dropdown is hidden, then find all submenus
+						this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
+							// hide every submenu as well
+							everysubmenu.style.display = 'none';
+						});
+					})
+				});
+
+				document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
+					element.addEventListener('click', function (e) {
+
+						let nextEl = this.nextElementSibling;
+						if (nextEl && nextEl.classList.contains('submenu')) {
+							// prevent opening link if link needs to open dropdown
+							e.preventDefault();
+							console.log(nextEl);
+							if (nextEl.style.display == 'block') {
+								nextEl.style.display = 'none';
+							} else {
+								nextEl.style.display = 'block';
+							}
+
+						}
+					});
+				})
+			}
+		}); 
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="img/Logo.png" class="img-fluid">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-times"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="main_nav">
+				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
+					<li class="nav-item active"> <a class="nav-link" href="#">About Us </a> </li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Certifications </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+								<ul class="submenu dropdown-menu">
+									<li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+									<li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+									<li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+										<ul class="submenu dropdown-menu">
+											<li><a class="dropdown-item" href="#">Multi level 1</a></li>
+											<li><a class="dropdown-item" href="#">Multi level 2</a></li>
+										</ul>
+									</li>
+									<li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+									<li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 4 </a>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> More items </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+								<ul class="submenu dropdown-menu">
+									<li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+									<li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+									<li><a class="dropdown-item" href="#">Submenu item 3</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 3 &raquo; </a>
+								<ul class="submenu dropdown-menu">
+									<li><a class="dropdown-item" href="#">Another submenu 1</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 2</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 3</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 4</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 4 &raquo;</a>
+								<ul class="submenu dropdown-menu">
+									<li><a class="dropdown-item" href="#">Another submenu 1</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 2</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 3</a></li>
+									<li><a class="dropdown-item" href="#">Another submenu 4</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 5 </a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 6 </a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="d-flex rightbox" role="search">
+					<button class="btn  lo_reg"><a href="#" class="login">Login / Register
+						</a></button>
+					<button class="btn  nav-search " type="submit" data-bs-toggle="dropdown" role="button">
+						<a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+					</button>
+					<div class="dropdown-menu search-input">
+						<input id="txtSearchCertification" type="text" class="form-control" autocomplete="off"
+							placeholder="Search Certifications Here">
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section class="banner">
+		<div class="container bannerPostion">
+			<div class="row ">
+				<div class="col-md-6">
+					<div class="bannerSec">
+						<h5> DEVOPS CERTIFICATION </h5>
+						<h5> PHP DEVELOPER CERTIFICATION </h5>
+						<h5> WEB DEVELOPER CERTIFICATION </h5>
+						<h5> CLOUD DEVELOPER CERTIFICATION </h5>
+						<BUTTON class=" btn cusBtn largeBtn"> GET STARTED</BUTTON>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<form>
+						<div class="bannerSec bannerForm">
+							<p> Quick Quote</p>
+							<div class="input-group mb-3">
+								<select class=" form-select" aria-label="Default select example">
+									<option selected> Select Course</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="input-group mb-3">
+								<input type="name" class="form-control" id="" placeholder="Name">
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="input-group mb-3">
+										<input type="email" class="form-control" id="" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-group mb-3">
+										<input type="Number" class="form-control" id="" placeholder="number">
+
+									</div>
+								</div>
+							</div>
+							<div class="input-group mb-3">
+								<textarea class="form-control" placeholder="Message" id=""
+									style="height: 100px;resize:none;"></textarea>
+							</div>
+							<button class="btn getQuote">
+								GET A FREE QUOTE
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading"> Association </h4>
+				</div>
+				<div class="col-lg-6">
+					<p>
+						Welcome to Certaining, a globally recognized vendor-neutral certification body that is committed
+						to
+						developing
+						industry-standard certification exams in a wide range of domains including Cybersecurity,
+						Emerging Technology, Software, Data Analytics, ISO, and Quality Management.
+					</p>
+					<p>
+						We pride ourselves on offering high-quality certification programs that are designed to meet the
+						ever-evolving needs of the industry. Our certification exams are developed by subject matter
+						experts who possess years
+						of industry experience,ensuring that our exams are comprehensive, practical, and relevant to the
+						current market trends.
+					</p>
+					<p>
+						At Certaining, we understand the importance of building a skilled workforce that can meet the
+						demands
+						of the
+						ever-changing technology landscape. Hence, we partner with leading training organizations,
+						corporate
+						entities,
+						government bodies, and academic institutions around the world to deliver high-quality tech
+						talent
+						that can take on the
+						challenges of the digital age.
+					</p>
+				</div>
+				<div class="col-lg-6">
+					<img src="img/association.png" class="img-fluid">
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading"> Our Certification</h4>
+					<p class="title">
+						Our certifications are recognized globally.
+						<br>
+						It is highly valued by employers, as they demonstrate the candidate's expertise and practical
+						skills in their respective
+						domains
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="certificationSlider" class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="certBox">
+							<div class="certicon">
+								<img src="img/certi.svg" class="img-fluid">
+							</div>
+							<div class="certiName">
+								<p> Emerging Technologies </p>
+							</div>
+							<div class="certipara">
+								The Certaining Certified Artificial Intelligence Professional certification exam is a
+								global vendor-neutral certification...
+							</div>
+							<div class="certCount">
+								<a href="#" class="count"><span> 5 </span> Certification</a>
+								<a href="#" class="readMore cusBtn"> Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gap choose">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4 class="heading">
+						Why Choose Us?
+					</h4>
+					<p class="title">
+						With the globally accepted certifications, Beingcert has accelerated the growth of several
+						professionals <br> who are looking for a promotion or career boost.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> Located Test Center </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> 24-Hours Support </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> Cargo Security </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> Cargo Security </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> Cargo Security </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="chooseBox">
+						<div class="subHeading">
+							<h4 class="redLine"> Cargo Security </h4>
+						</div>
+						<div class="chooseText">
+							<p>
+								Certified Artificial Intelligence Professional certification exam is a global
+								vendor-neutral certification that
+								validates the knowledge and skills required to work in the Artificial Intelligence
+								domain
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gap fandq">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading"> Frequently Asked Question</h4>
+				</div>
+			</div>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-8">
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Accordion Item #1
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the first item's accordion body.</strong> It is shown by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Accordion Item #2
+								</button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the second item's accordion body.</strong> It is hidden by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Accordion Item #3
+								</button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the third item's accordion body.</strong> It is hidden by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									Accordion Item #4
+								</button>
+							</h2>
+							<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the third item's accordion body.</strong> It is hidden by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingFive">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									Accordion Item #4
+								</button>
+							</h2>
+							<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the third item's accordion body.</strong> It is hidden by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingSix">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+									Accordion Item #4
+								</button>
+							</h2>
+							<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<strong>This is the third item's accordion body.</strong> It is hidden by default,
+									until the collapse
+									plugin adds the appropriate classes that we use to style each element. These classes
+									control the overall
+									appearance, as well as the showing and hiding via CSS transitions. You can modify
+									any of this with
+									custom CSS or overriding our default variables. It's also worth noting that just
+									about any HTML can go
+									within the <code>.accordion-body</code>, though the transition does limit overflow.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gap client">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading ">
+						Some of Our Clients
+					</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div id="clientsSlider" class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="clientBox">
+							<img src="img/client/google.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clientBox">
+							<img src="img/client/hcl.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clientBox">
+							<img src="img/client/slideramazon.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clientBox">
+							<img src="img/client/VMware.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="item">
+						<div class="clientBox">
+							<img src="img/client/hcl.png" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="gap testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading ">
+						What Student Say About Us
+					</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div id="testimonials" class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testiBox">
+							<div class="testiBoximg">
+								<img src="img/testi/test001.png">
+							</div>
+							<div class="text-center">
+								<p>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature
+									from 45 BC, making it over 2000 years old.
+								</p>
+								<div class="testinameSec">
+									<span> Samantha </span>
+									<span> Marketing Manager </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribe gap">
+		<div class="subBox">
+			<p> Want any certification for you or yours friends</p>
+			<button class="btn cusBtn largeBtn">Subscribe Now </button>
+		</div>
+	</section>
+	<section class="blogs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="heading">
+						Read More & Blog Articles
+					</h4>
+					<p class="title">
+						It is a long established fact that a reader will be distracted by the readable content of a page
+						when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+						distribution of letters, as opposed to using 'Content here, content here', making it look like
+						readable English.
+					</p>
+				</div>
+			</div>
+			<div id="blogs" class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="blogsBox">
+						<h3 class="blogHeading">
+							Full Stack Development in the Age of Digital Transformation
+						</h3>
+						<p>
+							In the rapidly evolving landscape of technology, businesses are constantly seeking
+							innovative ways to enhance their
+							digital presence. The age of digital transformation has shown in a new era, where
+							traditional business models are being
+							reshaped by the power of technology. At the core of this transformation lies Full Stack
+							Development, a comprehensive
+							approach to building robust, user-friendly, and scalable applications that meet the demands
+							of modern consumers.
+						</p>
+						<div class="social_media">
+							<span> Share This Post :- </span>
+							<a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+						</div>
+						<a href="#" class="readmore"> read more</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="blogsBox">
+						<h3 class="blogHeading">
+							Full Stack Development in the Age of Digital Transformation
+						</h3>
+						<p>
+							In the rapidly evolving landscape of technology, businesses are constantly seeking
+							innovative ways to enhance their
+							digital presence. The age of digital transformation has shown in a new era, where
+							traditional business models are being
+							reshaped by the power of technology. At the core of this transformation lies Full Stack
+							Development, a comprehensive
+							approach to building robust, user-friendly, and scalable applications that meet the demands
+							of modern consumers.
+						</p>
+						<div class="social_media">
+							<span> Share This Post :- </span>
+							<a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+						</div>
+						<a href="#" class="readmore"> read more</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="blogsBox">
+						<h3 class="blogHeading">
+							Full Stack Development in the Age of Digital Transformation
+						</h3>
+						<p>
+							In the rapidly evolving landscape of technology, businesses are constantly seeking
+							innovative ways to enhance their
+							digital presence. The age of digital transformation has shown in a new era, where
+							traditional business models are being
+							reshaped by the power of technology. At the core of this transformation lies Full Stack
+							Development, a comprehensive
+							approach to building robust, user-friendly, and scalable applications that meet the demands
+							of modern consumers.
+						</p>
+						<div class="social_media">
+							<span> Share This Post :- </span>
+							<a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+						</div>
+						<a href="#" class="readmore"> read more</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="blogsBox">
+						<h3 class="blogHeading">
+							Full Stack Development in the Age of Digital Transformation
+						</h3>
+						<p>
+							In the rapidly evolving landscape of technology, businesses are constantly seeking
+							innovative ways to enhance their
+							digital presence. The age of digital transformation has shown in a new era, where
+							traditional business models are being
+							reshaped by the power of technology. At the core of this transformation lies Full Stack
+							Development, a comprehensive
+							approach to building robust, user-friendly, and scalable applications that meet the demands
+							of modern consumers.
+						</p>
+						<div class="social_media">
+							<span> Share This Post :- </span>
+							<a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a>
+							<a href="#"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+						</div>
+						<a href="#" class="readmore"> read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-4">
+					<div class="f-logo">
+						<img src="img/white-Logo.png" class="img-fluid">
+
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="quick-links">
+						<h5>Links </h5>
+						<ul>
+							<li><a href="#">Home </a></li>
+							<li><a href="#">About Us </a></li>
+							<li><a href="#">Contact Us </a></li>
+							<li><a href="#">Blog </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="quick-links">
+						<h5>Partners </h5>
+						<ul>
+							<li><a href="#">Academic Partner</a></li>
+							<li><a href="#">Delivery Partner</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="quick-links">
+						<h5>Candidates </h5>
+						<ul>
+							<li><a href="#">Locate Test Center</a></li>
+							<li><a href="#">Find An Authorized Training Partner</a></li>
+							<li><a href="#">Validate Certificate</a></li>
+							<li><a href="#">FAQ's </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="quick-links">
+						<h5>Policies </h5>
+						<ul>
+							<li><a href="#">Refund Policy </a></li>
+							<li><a href="#">Privacy Policy </a></li>
+							<li><a href="#">Terms of Use </a></li>
+							<li><a href="#">Monitoring Gateway </a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>
+				All Right Reserved 2024.Certaining Design by:Amit Kumar.
+			</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>
