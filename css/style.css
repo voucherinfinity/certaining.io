@@ -1360,3 +1360,33 @@ ul {
         margin-bottom: .5rem;
     }
 }
+
+.tp-mission-wrapper {
+    padding: 80px 90px;
+    padding-top: 0;
+    background-color: var(--tp-common-white);
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .tp-mission-wrapper {
+      padding: 80px 55px;
+      padding-top: 0;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .tp-mission-wrapper {
+      padding: 50px 50px;
+      padding-top: 0;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tp-mission-wrapper {
+      padding: 50px 50px;
+      padding-top: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .tp-mission-wrapper {
+      padding: 10px 10px;
+      padding-top: 0;
+    }
+  }
