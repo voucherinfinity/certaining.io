@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <style type="text/css">
+            /* ============ desktop view ============ */
+            @media all and (min-width: 992px) {
+    
+                .dropdown-menu li {
+                    position: relative;
+                }
+    
+                .dropdown-menu .submenu {
+                    display: none;
+                    position: absolute;
+                    left: 100%;
+                    top: -7px;
+                }
+    
+                .dropdown-menu .submenu-left {
+                    right: 100%;
+                    left: auto;
+                }
+    
+                .dropdown-menu>li:hover {
+                    background-color: #f1f1f1
+                }
+    
+                .dropdown-menu>li:hover>.submenu {
+                    display: block;
+                }
+            }
+    
+            /* ============ desktop view .end// ============ */
+    
+            /* ============ small devices ============ */
+            @media (max-width: 991px) {
+                .dropdown-item:hover>.submenu {
+                    display: block;
+                }
+    
+                .dropdown-menu .dropdown-menu {
+                    margin-left: 0.7rem;
+                    margin-right: 0.7rem;
+                    margin-bottom: .5rem;
+                }
+    
+            }
+    
+            /* ============ small devices .end// ============ */
+        </style>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelectorAll('.dropdown-menu').forEach(function (element) {
+                    element.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    });
+                })
+                if (window.innerWidth < 992) {
+    
+                    // close all inner dropdowns when parent is closed
+                    document.querySelectorAll('.navbar .dropdown').forEach(function (everydropdown) {
+                        everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                            // after dropdown is hidden, then find all submenus
+                            this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
+                                // hide every submenu as well
+                                everysubmenu.style.display = 'none';
+                            });
+                        })
+                    });
+    
+                    document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
+                        element.addEventListener('click', function (e) {
+    
+                            let nextEl = this.nextElementSibling;
+                            if (nextEl && nextEl.classList.contains('submenu')) {
+                                // prevent opening link if link needs to open dropdown
+                                e.preventDefault();
+                                console.log(nextEl);
+                                if (nextEl.style.display == 'block') {
+                                    nextEl.style.display = 'none';
+                                } else {
+                                    nextEl.style.display = 'block';
+                                }
+    
+                            }
+                        });
+                    })
+                }
+            }); 
+        </script>
+
+    </head>
+<body>
+      <!---header------->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo.png" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#main_nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item active"> <a class="nav-link"
+                            href="#">About Us </a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                            data-bs-toggle="dropdown"> Certifications </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> Dropdown
+                                    item 1 </a></li>
+                            <li><a class="dropdown-item" href="#"> Dropdown
+                                    item 2 &raquo; </a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="#">Submenu item 1</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Submenu item 2</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Submenu item 3 &raquo;
+                                        </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    href="#">Multi level
+                                                    1</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="#">Multi level
+                                                    2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Submenu item 4</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">Submenu item 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#"> Dropdown
+                                    item 3 </a></li>
+                            <li><a class="dropdown-item" href="#"> Dropdown
+                                    item 4 </a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                data-bs-toggle="dropdown"> More items </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 1 </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 2 &raquo; </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item"
+                                                href="#">Submenu item
+                                                1</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Submenu item
+                                                2</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Submenu item
+                                                3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 3 &raquo; </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                1</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                2</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                3</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 4 &raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                1</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                2</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                3</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="#">Another submenu
+                                                4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 5 </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        Dropdown item 6 </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex rightbox" role="search">
+                        <button class="btn  lo_reg"><a href="#"
+                                class="login">Login / Register
+                            </a></button>
+                        <button class="btn  nav-search " type="submit"
+                            data-bs-toggle="dropdown" role="button">
+                            <a href="#"><i class="fa fa-search"
+                                    aria-hidden="true"></i></a>
+                        </button>
+                        <div class="dropdown-menu search-input">
+                            <input id="txtSearchCertification" type="text"
+                                class="form-control" autocomplete="off"
+                                placeholder="Search Certifications Here">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!---header end---->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <h1>About Certraining</h1>
+                        <ul style="list-style: none; display: flex;"
+                            class="bread-crumb clearfix">
+                            <li class="pr-5">Home</li>
+                            <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i>
+                            <li class="pl-5">About us</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="page-banner style-two"
+        style="background-image:url(img/about/about-image.jpg); margin-top: -17px;">
+        <div class="container">
+
+            <div class="inner-container clearfix">
+                <h1>Delivery Partner</h1>
+                <ul class="bread-crumb clearfix"
+                    style="list-style: none; display: flex;">
+
+                    <li><a href="index.php">Home</a></li>
+                    <i class="fa fa-arrow-right bread-crumb clearfix"
+                        style="color: white; padding-right: 15px;"
+                        aria-hidden="true"></i>
+
+                    <li><a href="http://"> 
+                        Delivery Partner Programme
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <p class="d-flex justify-content-center">
+                        Certaining is a premium platform that offers vendor-neutral certification solutions to help professionals excel in the constantly evolving IT world. It is an independent association headquartered in USA that helps professionals stay updated on the latest trends and advancements in the IT industry. One can upgrade themselves with certaining’s IT and non-IT certifications like ISO certifications, Python, AI, Cloud Computing, Agile Testing, Blockchain, DevOps, Big Data, and others.
+                    </p>
+                    <br>
+                    <h4 class="heading">
+                        Certaining Authorized Delivery Partner Program
+                    </h4>
+                    <p class="d-flex justify-content-center" >
+                        The main aim of the certaining Authorized Partner Program for Delivery Partners is to provide training organizations with valuable tools and resources to support them in training and certifying IT professionals. Effective training and certification are fundamental to achieving success in the field of IT. According to research, certified employees possess exceptional communication skills and are better equipped to comprehend new and complex technologies. The program is designed to assist trainers and organisations in promoting certifications and improving the IT career paths of their learners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <h4 class="heading">
+                        Benefits
+                    </h4>
+                    <div class="row" style="background-color: #2e3943; border-radius: 30px;">
+                    <div class="col-xl-12 text-center">
+                        <div class="tp-mission-tab-section ">
+                            <nav>
+                                <div
+                                    class="nav tp-mission-tab pt-5 pb-5 d-flex justify-content-around "
+                                    id="nav-tab" role="tablist"
+                                    style="justify-content: center;  ">
+                                    <button
+                                        class="nav-links active p-4"
+                                        style="background-color: #007388; border-radius: 22px; "
+                                        id="nav-Mission-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Mission"
+                                        type="button" role="tab"
+                                        aria-controls="nav-Mission-tab"
+                                        aria-selected="true"><span
+                                            style="color: white;"
+                                            class="pt-5">Financial Benefits
+                                        </span>
+                                    </button>
+                                    <button class="nav-links p-4 "
+                                        style="background-color: #007388; border-radius: 22px; "
+                                        id="nav-Vission-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Vission"
+                                        type="button" role="tab"
+                                        aria-controls="nav-Vission-tab"
+                                        aria-selected="true"><span
+                                            class=""
+                                            style="color: white;">Relationship benefits
+                                        </span>
+                                    </button>
+                                    <button class="nav-links p-4"
+                                        style="background-color: #007388; border-radius: 22px; "
+                                        id="nav-Goal-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Goal" type="button"
+                                        role="tab"
+                                        aria-controls="nav-Goal-tab"
+                                        aria-selected="true"><span
+                                            class="pr-4 pl-4"
+                                            style="color: white;">Sales Benefits
+                                        </span>
+                                    </button>
+                                    <button class="nav-links p-4 "
+                                        style="background-color: #007388; border-radius: 22px; "
+                                        id="nav-Goal-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Marketing" type="button"
+                                        role="tab"
+                                        aria-controls="nav-Goal-tab"
+                                        aria-selected="true"><span
+                                            
+                                            style="color: white;"> Marketing benefits
+                                        </span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tp-mission-wrapper z-index-3"
+                        style="background-color: rgb(224, 224, 224);">
+                        <div class="row justify-content-center"> </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="Mission"
+                                role="tabpanel"
+                                aria-labelledby="nav-Mission-tab" tabindex="0">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="tpmission">
+                                            <div class="tpmission__info">
+                                                <br><br>
+                                                <h4 class="title-skill">
+                                                    Financial Benefits
+                                                </h4>
+                                                <ul
+                                                    style="list-style: disc; padding-left: 20px;">
+                                                    <li class="pb-1">Discounts on exam vouchers
+                                                    </li>                                                                                    
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="tpmission__thumb">
+                                            <img
+                                                src="assets/img/mission/mission-1.jpg"
+                                                alt>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="Vission"
+                                role="tabpanel"
+                                aria-labelledby="nav-Vission-tab" tabindex="0">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-12">
+                                        <div class="tpmission">
+                                            <div class="tpmission__info">
+                                                <br><br>
+                                                <h4 class="title-skill">
+                                                  Relationship Benefits
+                                                </h4>
+
+                                                <ul
+                                                    style="list-style: disc; padding-left: 20px;">
+                                                    <li>Free Instructor Certification
+                                                    </li>
+                                                    <br>
+                                                    <li>
+                                                        Free Testing Center
+                                                    </li>
+                                                                                                                                             
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="tpmission__thumb">
+                                            <img
+                                                src="assets/img/mission/mission-2.jpg"
+                                                alt>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade " id="History" role="tabpanel" aria-labelledby="nav-History-tab" tabindex="0">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6">
+                                <div class="tpmission">
+                                    <div class="tpmission__info">
+                                        <h4 class="tp-mission-title">We provide the best insurance policy</h4>
+                                        <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo claritatem insitamconse quat.Exerci tation ullamcorper suscipit lobort</p>
+                                    </div>
+                                    <div class="tpmission__list">
+                                        <ul>
+                                            <li><i class="fal fa-check"></i>We are Award Winning Company</li>
+                                            <li><i class="fal fa-check"></i>Always Work With Energetic Team</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="tpmission__thumb">
+                                    <img src="assets/img/mission/mission-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                            <div class="tab-pane fade " id="Goal"
+                                role="tabpanel" aria-labelledby="nav-Goal-tab"
+                                tabindex="0">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-12">
+                                        <div class="tpmission">
+                                            <div class="tpmission__info">
+                                                <br><br>
+                                                <h4 class="title-skill">
+                                                    Sales Benefits
+                                                </h4>
+                                                <!-- <h4 class="tp-mission-title">We inspire and help our customers</h4> -->
+                                                <ul
+                                                    style="list-style: disc; padding-left: 20px;">
+                                                    <li>Lead sharing </li><br>
+                                                    <li> Participation in partner conferences and events </li><br>
+                                                    <li> Web listing , partner locator </li><br>
+                                                    <li>Regular product road map udpates  </li><br>
+                                                    <li>Access to certaining sales team and joint customer calls   </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="tpmission__thumb">
+                                            <img
+                                                src="assets/img/mission/mission-4.jpg"
+                                                alt>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="Marketing"
+                                role="tabpanel" aria-labelledby="nav-Goal-tab"
+                                tabindex="0">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-12">
+                                        <div class="tpmission">
+                                            <div class="tpmission__info">
+                                                <br><br>
+                                                <h4 class="title-skill">
+                                                    Marketing Benefits
+                                                </h4>
+                                                <!-- <h4 class="tp-mission-title">We inspire and help our customers</h4> -->
+                                                <ul
+                                                    style="list-style: disc; padding-left: 20px;">
+                                                    <li>Logo usage   </li><br>
+                                                    <li>No. of questions: 80
+                                                    </li><br>
+                                                    <li>Featured partner success story highlights </li><br>
+                                                    <li>Partner customizable branded materials </li><br>
+                                                    <li>Custom case study development/partner showcase </li> <br>
+                                                    <li>MDF</li> <br>
+                                                    <li>Co-marketing eligibility (events, webinars, and more)
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="tpmission__thumb">
+                                            <img
+                                                src="assets/img/mission/mission-4.jpg"
+                                                alt>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
