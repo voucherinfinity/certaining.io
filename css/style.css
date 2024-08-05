@@ -1495,7 +1495,7 @@ ul {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #673AB7;
+    border: 1px solid #007388;
     outline-width: 0;
 }
 
@@ -1514,7 +1514,7 @@ ul {
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    background-color: #311B92;
+    background-color: #007388;
 }
 
 /*Previous Buttons*/
