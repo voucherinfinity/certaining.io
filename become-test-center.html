@@ -428,35 +428,408 @@
                                             <label class="fieldlabels" >Director Contact Number</label>
                                             <input type="number" name="number" placeholder="Director Contact Number">
                                         </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-2">
+                                            <!-- <label for="exampleFormControlSelect2">Country</label>
+                                            <select class="form-control" id="exampleFormControlSelect2">
+                                                <option value="">Select Country</option>
+                                            </select> -->
+                                        </div>                                        
                                     </div>
-                                   
-                                    <label class="fieldlabels">Username: *</label>
-                                    <input type="text" name="uname" placeholder="UserName"/>
-                                    <label class="fieldlabels">Password: *</label>
-                                    <input type="password" name="pwd" placeholder="Password"/>
-                                    <label class="fieldlabels">Confirm Password: *</label>
-                                    <input type="password" name="cpwd" placeholder="Confirm Password"/>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-2">
+                                            <div class="form-group">
+                                                <label for="" class="fieldlabels">Country: *</label>
+                                                <select class="form-control" id="ddCenterCountry">
+                                                    <option value="-1">Select Country*</option>  
+                                                </select>                                            
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-2">
+                                            <div class="form-group">
+                                                <label for="" class="fieldlabels">State: *</label>
+                                                <select class="form-control" id="ddCenterCountry">
+                                                    <option value="-1">Select State: *</option>  
+                                                </select>                                            
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-2">
+                                            <div class="form-group">
+                                                <label for="" class="fieldlabels">City: *</label>
+                                                <select class="form-control" id="ddCenterCountry">
+                                                    <option value="-1">Select City*</option>  
+                                                </select>                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Company Complete Address</label>
+                                            <input type="text" name="text" placeholder="Company Complete Address">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Pincode</label>
+                                            <input type="number" name="number" placeholder="Pincode">  
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Phone Number (Include country and area code)</label>
+                                            <input type="number" name="number" placeholder="Enter Phone Number">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Fax (Include country and area code)</label>
+                                            <input type="number" name="number" placeholder="Fax (Include country and area code)">  
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Web Address </label>
+                                            <input type="number" name="number" placeholder="Web Address*">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Number of Testing Machine available for Certaining</label>
+                                            <input type="number" name="number" placeholder="Number of Testing Machine*">  
+                                        </div>                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="" class="fieldlabels">Business registration or academic license (proof of business): </label>
+                                                <input multiple="multiple" class="fileupload-input" accept=".pdf" id="fuDoc" type="file" name="files[]" aria-labelledby="label_81" aria-hidden="true" tabindex="-1">
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="fourm-group">
+                                                <label for="" class="fieldlabels"> Please list your other business locations (if applicable): </label>
+                                                <textarea placeholder="other business locations (if applicable):"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Personal Information:</h2>
+                                            <h2 class="fs-title">Test Center Requirement Checklist</h2>
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">Step 2 - 4</h2>
                                         </div>
                                     </div>
-                                    <label class="fieldlabels">First Name: *</label>
-                                    <input type="text" name="fname" placeholder="First Name"/>
-                                    <label class="fieldlabels">Last Name: *</label>
-                                    <input type="text" name="lname" placeholder="Last Name"/>
-                                    <label class="fieldlabels">Contact No.: *</label>
-                                    <input type="text" name="phno" placeholder="Contact No."/>
-                                    <label class="fieldlabels">Alternate Contact No.: *</label>
-                                    <input type="text" name="phno_2" placeholder="Alternate Contact No."/>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Testing room quiet and free of distractions</label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                              
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Partition between 2 or more computers </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                              
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Noise cancellation Headphones or earplugs </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                              
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Registration check-in area outside of testing room </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6" >
+                                            <label class="form-check" for="" >Do you currently offer computer-based testing with any other provider? </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Test Center Hardware and Techanical Requirements </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Processor 2.33 GHz or faster x86 compatible processor   </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >RAM – 2GB or more  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >HDD Space – 20 GB or more  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Monitor- 17” or more  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Operating System Win 10 and Win 11
+                                            </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Browser google chrome,edge etc  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Internet speed: download (2 mbps), upload (1 mbps) or higher  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Test Center Hardware and Techanical Requirements </h2>
+                                            <p><span style="font-weight: bold;">Note*:</span> Please specify your monitoring method during exam</p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                           
+                                            <label class="form-check" for="" >Physical Monitoring in testing room  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Viewing window </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >CCTV surveillance </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                    </div>
+                                    <div class="row" >
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Physical Description of Testing Center</h2>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <p><span style="font-weight: bold;">Note*:</span> Are you ready to submit pictures and video ? : (
+                                                <input type="radio" name="uploadVedios" value="Y" id="yesRadio"> Yes/
+                                                <input type="radio" name="uploadVedios" value="N" id="noRadio"> No
+                                            ) </p>
+                                            <div class="form-group showbutton" id="videoDiv" >
+                                
+                                                <input multiple="multiple" class="fileupload-input" accept="video/*,image/*" id="fuVideo" type="file" name="files[]" aria-labelledby="label_81" aria-hidden="true" tabindex="-1">
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                           
+                                            <label class="form-check" for="" >Test Delivery Area </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Lockers </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Reception  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Test Delivery Machine </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Building Exterior </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Building with Company Board                                            </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Parking       </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Waiting Area  </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Entrance of building   </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Entrance of Testing Room   </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                            <label class="form-check" for="" >Floor Plan</label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>                                            
+                                        </div>
+                                    </div>
+                                    <div class="row" >
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Accommodations   </h2>
+                                            <p>Certaining is committed to providing access for all individuals with disabilities. In order to assist candidates with disabilities, please provide the following information:
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Does your facility have access for candidates with disabilities?      </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>  
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Would you be willing to shut down to provide private testing?    </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>  
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="form-check" for="" >Do you have a separate room available and equipped with a test delivery workstation that can accommodate candidates with disabilities?
+                                            </label>
+                                            <div class="sel_wrap">
+                                                <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                               
+                                            </div>
+                                            <hr>  
+                                        </div>
+                                    </div>                               
                                 </div>
                                 <input type="button" name="next" class="next action-button" value="Next"/>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
@@ -465,45 +838,184 @@
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Image Upload:</h2>
+                                            <h2 class="fs-title">Agreement Contact Personnel:</h2>
+                                            <p><span style="font-weight: bold;">Note*:</span> Must be authorized to sign agreements on behalf of your company</p>
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">Step 3 - 4</h2>
                                         </div>
                                     </div>
-                                    <label class="fieldlabels">Upload Your Photo:</label>
-                                    <input type="file" name="pic" accept="image/*">
-                                    <label class="fieldlabels">Upload Signature Photo:</label>
-                                    <input type="file" name="pic" accept="image/*">
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Technical Personnel Contact Information </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Testing Administrator Contact-2/ Proctor Contact-2                                            </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Finance / Billing Contact Information </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>                                 
                                 </div>
-                                <input type="button" name="next" class="next action-button" value="Submit"/>
+                                <input type="button" name="next" class="next action-button" value="Next"/>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Finish:</h2>
+                                            <h2 class="fs-title">Select Exam:</h2>                                            
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">Step 4 - 4</h2>
                                         </div>
                                     </div>
-                                    <br><br>
-                                    <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2>
-                                    <br>
-                                    <div class="row justify-content-center">
-                                        <div class="col-3">
-                                            <img src="https://i.imgur.com/GwStPmg.png" class="fit-image">
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <span class="all">
+                                                <input type="checkbox" id="selectAll">
+                                                Select All
+                                            </span>
+                                            <div class="exam_center_list">
+                                                <ul>
+                                                    <li>
+                                                        <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                        <input type="hidden" id="hdnExamId" value="252">
+                                                        <span>Beingcert Certified SOC Analyst Certification</span>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="interests[]" class="checkbox">
+                                                        <input type="hidden" id="hdnExamId" value="252">
+                                                        <span>Beingcert Certified SOC Analyst Certification</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <br><br>
-                                    <div class="row justify-content-center">
-                                        <div class="col-7 text-center">
-                                            <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
                                         </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
                                     </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Technical Personnel Contact Information </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Testing Administrator Contact-2/ Proctor Contact-2                                            </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>
+                                    <div class="row" style="margin-bottom: 3rem;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <h2 class="fs-title">Finance / Billing Contact Information </h2>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Name</label>
+                                            <input type="text" name="text" placeholder="Name*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Mobile Number</label>
+                                            <input type="number" name="number" placeholder="Mobile number*"> 
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <label class="fieldlabels" >Email Address</label>
+                                            <input type="email" name="email" placeholder="Email Address*"> 
+                                        </div>
+
+                                    </div>                                 
                                 </div>
+                                <input type="button" name="next" class="next action-button" value="Submit"/>
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                             </fieldset>
                         </form>
                     </div>

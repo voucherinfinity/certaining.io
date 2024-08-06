@@ -191,3 +191,27 @@ $type="text/javascript">
             })
                 
             });
+
+
+
+
+
+    //yes radio button in become test center
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesRadio = document.getElementById('yesRadio');
+            const noRadio = document.getElementById('noRadio');
+            const videoDiv = document.getElementById('videoDiv');
+
+            yesRadio.addEventListener('change', function() {
+                if (yesRadio.checked) {
+                    videoDiv.classList.remove('showbutton');
+                }
+            });
+
+            noRadio.addEventListener('change', function() {
+                if (noRadio.checked) {
+                    videoDiv.classList.add('showbutton');
+                }
+            });
+        });
+    

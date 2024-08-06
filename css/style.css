@@ -1440,13 +1440,7 @@ ul {
 
 
 
-
-
-        #heading {
-	text-transform: uppercase;
-	color: #673AB7;
-	font-weight: normal;
-}
+/*-----become test centre----*/
 
 #msform {
     text-align: center;
@@ -1491,13 +1485,42 @@ ul {
     letter-spacing: 1px;
 }
 
-#msform input:focus, #msform textarea:focus {
+.fileupload-input {
+    background: #d9d7d4;
+    padding: 10px;
+    border-radius: 7px;
+    margin-block-start: 0.5rem;
+}
+#msform input  {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     border: 1px solid #007388;
     outline-width: 0;
 }
+#msform select, #msform option {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#msform select:focus, #msform option:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #007388;
+    outline-width: 0;
+}
+
 
 /*Next Buttons*/
 #msform .action-button {
@@ -1533,6 +1556,22 @@ ul {
 
 #msform .action-button-previous:hover, #msform .action-button-previous:focus {
     background-color: #000000;
+}
+#msform input[type="radio" i] {
+    width: 13px;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+.check_span {
+    margin-inline: 0.5rem;
+}
+.form-check{
+    padding: 0px;
 }
 
 /*The background card*/
@@ -1656,4 +1695,26 @@ ul {
 .fit-image{
     width: 100%;
     object-fit: cover;
+}
+
+.showbutton{
+    display: none;
+}
+
+.exam_center_list {
+    overflow: auto;
+    max-height: 458px;
+    max-width: 500px;
+    margin-block-end: 2rem;
+    border: 1px solid #007388;
+    padding-block: 0.5rem;
+}
+.all {
+    margin-inline-start: 2rem;
+    margin-block: 0.5rem;
+    display: inline-block;
+}
+
+.exam_center_list ul li input #checkbox {
+    width: 15px;
 }
