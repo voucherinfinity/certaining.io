@@ -214,4 +214,15 @@ $type="text/javascript">
                 }
             });
         });
+
+
+//select all exam in become test center 
+
+function toggleSelectAll() {
+    var selectAllCheckbox = document.getElementById('selectAll');
+    var checkboxes = document.querySelectorAll('.exam_center_list .checkbox');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+}
     
