@@ -1725,3 +1725,44 @@ ul {
     padding: initial;
     border: initial;
 }
+.custombutton{
+    border: 1px solid #000;
+    border-radius: 25rem;
+    
+}
+.btnactive{
+    background-color: #001e57 ;
+    color: white;
+    background-size: 100%;
+    width: 20rem;
+}
+.btn-check:checked + .btn {
+    background-color: #007388; /* Change to your desired active background color */
+    color: white;
+    border-radius: none;
+}
+
+.btn-check:hover + .btn {
+    background-color: #007388; /* Change to your desired active background color */
+    color: white;
+    border: none;
+    border-radius: none;
+}
+.btn-check:not(:checked) + .btn {
+    color: #000000; /* Non-active text color */
+}
+.loginform {
+    margin-top: 3rem;
+    border-radius: 25px;
+    padding: 30px 30px 30px 30px;
+    border: 0.5px solid #ddd;
+    box-shadow: 2.5px 2.5px 2px 2.5px grey;
+}
+.registerform{
+    margin-top: 3rem;
+    border-radius: 25px;
+    padding: 30px;
+    border: 0.5px solid #ddd;
+    box-shadow: 2.5px 2.5px 2px 2.5px grey;
+}
+

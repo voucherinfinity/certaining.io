@@ -225,4 +225,30 @@ function toggleSelectAll() {
         checkbox.checked = selectAllCheckbox.checked;
     });
 }
+
+
+//split button in login page
+
+$('#splitbutton').click(function(e) {
+    if (e.clientX < $(this).offset().left + $(this).outerWidth() / 2)
+        console.log('left');
+    else
+        console.log('right');
+});
     
+
+
+//-----login form-----//
+document.getElementById('btnradio1').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+    }
+});
+
+document.getElementById('btnradio2').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
+    }
+});
