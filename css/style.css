@@ -1765,4 +1765,25 @@ ul {
     border: 0.5px solid #ddd;
     box-shadow: 2.5px 2.5px 2px 2.5px grey;
 }
+.jeet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -277px;
+    font-size: large;
+    font-weight: bold;
+  }
+  
 
+
+  
+  
+.heetu{
+    background-image: url(/img/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: auto;
+   
+}
