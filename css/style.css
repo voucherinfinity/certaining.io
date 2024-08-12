@@ -1787,3 +1787,12 @@ ul {
     height: auto;
    
 }
+
+.pfit{
+    max-height: 250px;
+    max-height: 458px;
+    overflow: auto;
+    border: 1px solid #2e3943;
+    border-radius: 4px;
+    padding: 1rem;
+}
