@@ -1796,3 +1796,221 @@ ul {
     border-radius: 4px;
     padding: 1rem;
 }
+
+
+/*------Dashboard Css Start----------*/
+/* .admin-menu{
+    background-color: #fbfffa;
+    border-radius: 4px;
+    box-shadow: 10px 15px 20px 0 rgba(47, 57, 68, .1);
+    position: relative;
+    z-index: 0;
+}
+.admin-wrap  {
+    width: 235px;
+    box-shadow: 2px 0 2px 0 rgba(60, 70, 88, .2);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.admin-left-menu{
+    width: 0;
+    box-shadow: 2px 0 2px 0 rgba(47, 57, 68, 0.1);
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.main-menu {
+    background: #212121;
+    position: absolute;
+    top: 92px;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    overflow: hidden;
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    z-index: 1000;
+}
+.main-menu > ul {
+    margin: 7px 0;
+}
+
+.main-menu li {
+    position: relative;
+    display: block;
+    width: 250px;
+}
+.nav-stacked>li {
+    float: none;
+}
+.admin-menu ul.nav > li > a:focus, .admin-menu ul.nav > li > a:hover, nav.main-menu li.active > a {
+    color: #76df3e;
+    background-color: #fbfffa;
+    border-left: 4px solid #76df3e;
+}
+
+.admin-menu ul.nav > li > a {
+    color: #cccaca;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 7px 15px 7px 50px;
+    border-radius: 0;
+    position: relative;
+    border-left: 4px solid transparent;
+}
+
+.fa-2x {
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+ */
+
+
+
+/*----trial ----*/
+
+.sidebar {
+    height: 96vh;
+    width: 68px;
+    transition: width 0.3s;
+    overflow: hidden;
+    background-color: #343a40;
+  }
+  
+  .sidebar:hover {
+    width: 250px;
+    
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link i {
+    font-size: 1.5rem;
+  }
+  
+  .menu-text {
+    margin-left: 10px;
+    white-space: nowrap;
+    display: none;
+  }
+  
+  .sidebar:hover .menu-text {
+    display: inline-block;
+  }
+
+  .nav-item:hover  .nav-link {
+    background-color: #007388; /* Background color white on hover */
+    color: white; /* Text color black on hover */
+  }
+  .nav ul li :active{
+    background-color: #007388;
+    color: white;
+  }
+
+  .profile-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e9ecef; /* Border to separate from nav items */
+    background-color: #f8f9fa; /* Light background for profile section */
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .content1 {
+    padding: 121px 28px 13px 88px;
+    /* margin-top: 10rem;
+    margin-left: 80px; 
+    width: calc(100% - 80px);
+    margin-top: 10rem;
+    width: auto;
+    margin-left: 0;
+    min-height: 660px; */
+  }
+  @media (min-width: 320px) and (max-width: 420px){
+    .content1{
+        padding: 92px 0 0 61px;
+    }
+  }
+  
+
+  @media (min-width: 421px) and (max-width: 767.98px) {
+    .content1{
+        padding: 88px 8px 0 92px;
+    }
+  } 
+  @media (min-width: 320px) and (max-width: 420.98px) {
+    .content1{
+        padding: 92px 0 0 90px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 979.98px) {
+    .content1{
+        padding: 145px 14px 6px 90px;
+    }
+    
+    }
+    
+
+.pstyle{
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #d6dded;
+    border-radius: 50px;
+}
+
+.profile-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 300px;
+}
+.pro-img{
+    margin-top: 1rem;
+}
+.pro-img img {
+    height: 114px;
+    width: 114px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    outline: 0;
+    margin-right: 11px;
+}
+.lst-exam{
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    border: 1px solid #d6dded;
+}
+.profile-box1{
+    height: 114px;
+    width: 114px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    outline: 0;
+    margin-right: 11px;
+}

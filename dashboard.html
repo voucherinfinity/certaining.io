@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <style type="text/css">
+    <!-- <style type="text/css">
         /* Sidebar styles */
         #sidebar {
             position: fixed;
-            top: 0;
+            top: 25;
             left: -250px;
             width: 250px;
             height: 100%;
@@ -108,19 +110,11 @@
                 margin-left: 250px;
             }
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
+   
 
    
 
@@ -208,12 +202,561 @@
             </div>
         </nav>
          <!-- Toggle Button -->
+          <style>
+
+          </style>
     <button id="toggle-btn"><i class="fa fa-bars"></i></button>
         <!---header end---->
+        <section class="admin-wrap">
+            <div class="">
+                <div class="sidebar" style="position: fixed;">
+                  <ul class="nav flex-column " style="padding-top: 5rem;">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="bi bi-house-door"></i>
+                        <span class="menu-text">Dashboard</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <i class="bi bi-laptop"></i>
+                        <span class="menu-text">Shedule New Exam</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-copy"></i>
+                            <span class="menu-text">Re-Shedule Exam</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-award"></i>
+                            <span class="menu-text">Certificate & Score Report </span>
+                        </a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-key"></i>
+                            <span class="menu-text">Change Password </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-exclamation-circle"></i>
+                            <span class="menu-text">Support</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span class="menu-text">Logout</span>
+                        </a>
+                    </li>
+                  </ul>
+                 
+                  <div class="profile-section">
+                    <div class="dropdown profile-info p-3">
+                      <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/1.png" alt="Profile Picture" class="profile-pic rounded-circle me-2">
+                        <span class="menu-text">John Doe</span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">View Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="content1">
+                   
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h1 class="heading">
+                                    Dashboard
+                                </h1>
+                                <p class="pstyle" >View the details of your latest exam along with its real-time status.  </p>                         
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-lg-7 col-md-7 col-sm-6 text-center pb-2">
+                                <div style="background-color: #2e3943; border-radius: 30px 30px 0px 0">
+                                    <div class="tp-mission-tab-section ">
+                                        <nav>
+                                            <div
+                                                class="nav tp-mission-tab pt-5 pb-5 d-flex justify-content-around "
+                                                id="nav-tab" role="tablist"
+                                                style="justify-content: center;  ">
+                                                <button
+                                                    class="nav-links active p-4 "
+                                                    style="background-color: #007388; border-radius: 22px; "
+                                                    id="nav-Mission-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#Mission"
+                                                    type="button" role="tab"
+                                                    aria-controls="nav-Mission-tab"
+                                                    aria-selected="true"><span
+                                                        style="color: white;"
+                                                        class="pt-5">Upcoming Exam
+                                                    </span>
+                                                </button>
+                                                <button class="nav-links p-4  "
+                                                    style="background-color: #007388; border-radius: 22px; "
+                                                    id="nav-Vission-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#Vission"
+                                                    type="button" role="tab"
+                                                    aria-controls="nav-Vission-tab"
+                                                    aria-selected="true"><span
+                                                        class=""
+                                                        style="color: white;">Cancelled Exam
+                                                    </span>
+                                                </button>
+                                                <button class="nav-links p-4 "
+                                                    style="background-color: #007388; border-radius: 22px; "
+                                                    id="nav-Goal-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#Goal" type="button"
+                                                    role="tab"
+                                                    aria-controls="nav-Goal-tab"
+                                                    aria-selected="true"><span
+                                                        class="pr-4 pl-4"
+                                                        style="color: white;">Score Report
+                                                    </span>
+                                                </button>
+                                                <button class="nav-links p-4 "
+                                                    style="background-color: #007388; border-radius: 22px; "
+                                                    id="nav-Goal-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#Marketing" type="button"
+                                                    role="tab"
+                                                    aria-controls="nav-Goal-tab"
+                                                    aria-selected="true"><span
+                                                        
+                                                        style="color: white;"> Earned Certificate
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    
+                                    <div class="tp-mission-wrapper z-index-3"
+                                    style="background-color: rgb(224, 224, 224);">
+                                    <div class="row justify-content-center"> </div>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="Mission"
+                                            role="tabpanel"
+                                            aria-labelledby="nav-Mission-tab" tabindex="0">
+                                            <div class="row align-items-center">
+                                                <div class="col-xl-12 col-lg-12">
+                                                    <div class="tpmission">
+                                                        <div class="tpmission__info">
+                                                            <br><br>
+                                                            <h4 class="title-skill">
+                                                            Upcoming Exam
+                                                            </h4>
+                                                            <ul
+                                                                style="list-style: disc; padding-left: 20px;">
+                                                                <li class="pb-1"> No Exam
+                                                                </li>                                                                                    
+                                                            </ul>
+                                                        </div>
+        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6">
+                                                    <div class="tpmission__thumb">
+                                                        <img
+                                                            src="assets/img/mission/mission-1.jpg"
+                                                            alt>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade " id="Vission"
+                                            role="tabpanel"
+                                            aria-labelledby="nav-Vission-tab" tabindex="0">
+                                            <div class="row align-items-center">
+                                                <div class="col-xl-12">
+                                                    <div class="tpmission">
+                                                        <div class="tpmission__info">
+                                                            <br><br>
+                                                            <h4 class="title-skill">
+                                                                Cancelled Exam
+                                                            </h4>
+        
+                                                            <ul
+                                                                style="list-style: disc; padding-left: 20px;">
+                                                                <li>No Cancelled Exam
+                                                                </li>
+                                                                <br>
+                                                                
+                                                                                                                                                        
+                                                            </ul>
+                                                        </div>
+        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="tpmission__thumb">
+                                                        <img
+                                                            src="assets/img/mission/mission-2.jpg"
+                                                            alt>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                           
+                                        <div class="tab-pane fade " id="Goal"
+                                            role="tabpanel" aria-labelledby="nav-Goal-tab"
+                                            tabindex="0">
+                                            <div class="row align-items-center">
+                                                <div class="col-xl-12">
+                                                    <div class="tpmission">
+                                                        <div class="tpmission__info">
+                                                            <br><br>
+                                                            <h4 class="title-skill">
+                                                                Score Report
+                                                            </h4>
+                                                            <!-- <h4 class="tp-mission-title">We inspire and help our customers</h4> -->
+                                                            <ul
+                                                                style="list-style: disc; padding-left: 20px;">
+                                                                <li>No Score Report </li><br>
+                                                                
+                                                            </ul>
+                                                        </div>
+        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="tpmission__thumb">
+                                                        <img
+                                                            src="assets/img/mission/mission-4.jpg"
+                                                            alt>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade " id="Marketing"
+                                            role="tabpanel" aria-labelledby="nav-Goal-tab"
+                                            tabindex="0">
+                                            <div class="row align-items-center">
+                                                <div class="col-xl-12">
+                                                    <div class="tpmission">
+                                                        <div class="tpmission__info">
+                                                            <br><br>
+                                                            <h4 class="title-skill">
+                                                                Earned Certificate
+                                                            </h4>
+                                                            <!-- <h4 class="tp-mission-title">We inspire and help our customers</h4> -->
+                                                            <ul
+                                                                style="list-style: disc; padding-left: 20px;">
+                                                                <li>No Earned Certificate  </li><br>
+                                                                
+                                                            
+                                                            </ul>
+                                                        </div>
+        
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="tpmission__thumb">
+                                                        <img
+                                                            src="assets/img/mission/mission-4.jpg"
+                                                            alt>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="profile-box" style="border-radius: 30px;">
+                                    <button class="nav-links pt-2 pb-2 pr-2 pl-4 m-3 active" style="background-color: #007388; width: 7rem; border-radius: 22px; " id="nav-Mission-tab" data-bs-toggle="tab" data-bs-target="#Mission" type="button" role="tab" aria-controls="nav-Mission-tab" aria-selected="true">
+                                        <span style="color: white;" class="pt-5">Profile </span>
+                                    </button>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="pro-img">
+                                                <img src="img/about/about-image.jpg" alt="" srcset="">
+                                            </div>                                            
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <span style="display: flex;"><P><strong>Candidate ID:</strong></P> <p class="ms-1"> BC82136893</p></span>
+                                            <span style="display: flex;"><P><strong>Full Name:</strong></P> <p class="ms-3"> Jeetender</p></span>
+                                            <span style="display: flex;"><P><strong>Mobile No:</strong></P> <p class="ms-3"> 9911493479</p></span>
+                                            <span style="display: flex;"><P><strong>Mail ID:</strong></P> <p class="ms-3"> Jitenderjk.digi@gmail.com</p></span>
+                                            <span style="display: flex;"><P><strong>Address:</strong></P> <p class="ms-3"> **</p></span>
+                                            
+                                            <!-- <div class="row d-flex">
+                                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                                    
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                                    
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" mt-2 mb-5 " style="border-radius: 30px;">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item" id="accordion-item-1">
+                                          <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                              Terms of Use
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body" style="overflow: auto; height: 90px;" >
+                                                <p>Please read all the terms & conditions carefully, before registering and using the services of Beingcert.com. The following Terms and conditions will be applicable to all the visitors, users and others who wish to access and use the services of Beingcert.
 
-        <!-- Main Content -->
-        <div class="container mt-5">
-            <h1>Welcome to Our Website</h1>
-            <p>This is the main content area. You can add your content here.</p>
+                                                    By accepting these terms, you agree to be legally bound by the agreements whether or not you are a registered user.
+                                                    
+                                                    In case, you disagree with any part of these terms or our Privacy Policy, you should not use the Beingcert Site.
+                                                    
+                                                    Candidates are requested to carefully read all the terms before they click on the “Agree” button while registering themselves for certain exams. Once a candidate agrees to the terms it would confirm their compliance towards the contract signed for following the exams rules.
+                                                    
+                                                    Our website provides certain links of other websites but we at Beingcert do not endorse those websites.
+                                                    
+                                                    Beingcert uses the services of third party for facilitating payment. By submitting their information, a candidate grants us the right to share their information with that third party subject to our privacy policy.
+                                                    
+                                                    Our website has developed certain protocols to analyse the authenticity of the information shared and to detect any kind of fraud. Any false information or a duplicate entry by the candidates will be rejected. In such a case, the amount submitted by the candidates might be forfeited and it might lead to the cancellation of the exam as well.
+                                                    
+                                                    By visiting and registering on our website a candidate agrees to receive communications from us in the form of agreements, notices, disclosures and other communications through email or by updating the information on the site.
+                                                    
+                                                    Exams are conducted under strict vigilance. Candidates shall carefully follow all instructions at the time of taking exams. Any violation of rules might result into cancellation of the exam. Beingcert reserves the right to disqualify the candidate depending upon the situation.
+                                                    
+                                                    Beingcert is not a body or an organization offering legal education and does not require any approval to conduct exams. Exams are held in a peaceful environment and under strict supervision. Any kind of disturbance from a Candidate might result in a strict action or cancellation of his/her exam.</p> 
+                                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item" id="accordion-item-2">
+                                          <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Refund Policy
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body" style="overflow: auto; height: 90px;">
+                                                The refund percentages mentioned are in case of full fee payment and not just for any amount paid. Refund percentages will be applicable only in the case where complete fee of the product has been paid without any balance remaining
+
+                                                    In a situation where, candidates card/bank gets debited multiple times due some technical error OR a situation where a candidate’s account is debited of an extra amount in a single transaction itself due some technical error, excess amount excluding the Payment Gateway charges would be refunded to the candidate.
+
+                                                    In case a candidate’s account gets debited with the exam fee but the candidate does not gets enrolled for the exam due some technical error, the candidate will be provided the Examination ID by Beingcert after proper verification, without any charges or extra cost. However, in such a case, if the candidate wishes to get the amount refunded then he/she will be refunded the net amount after deducting the payment gateway charges or any other charges, if any.
+
+                                                    The registration will be processed manually and only after a thorough verification, if the claim is found valid, the amount that has been received in excess will be refunded by Beingcert through the electronic mode in favour of the applicant.
+
+                                                    The registration will be processed manually and only after a thorough verification, if the claim is found valid, the amount that has been received in excess will be refunded by Beingcert through the electronic mode in favour of the applicant.
+
+                                                    On receipt of such claims a confirmation will also be sent to the mailing address mentioned in the Online Registration Form, within a period of 7-10 calendar days.
+
+                                                    Beingcert has a zero tolerance policy in case of charge backs. Any customer who has a dispute in regards to a credit card payment that is found to be valid will permanently be blacklisted or barred from any kind of dealing with Beingcert. Any past due fees and costs will be reported to all available Credit Reporting Agencies.
+
+                                                    A client shall sincerely reveal all the details to Beingcert about each and every case, existing or past, any case of wrong doing and/or conviction and insolvency levelled against the client or on those who are dependent on him. In case a client does not reveals all such details and any such thing is found later on, client will not be refunded any amount by Beingcert.
+
+                                                    If a candidate’s refund request falls under the acceptable terms and conditions of the Company and the service agreement, the time taken to process such a request will be 30 working days.
+                                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item" id="accordion-item-3">
+                                          <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Privacy Policy
+                                            </button>
+                                          </h2>
+                                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body " style="overflow: auto; height: 90px;"  >
+                                                Beingcert substantiates the authenticity of the information provided on its website.
+
+                                                Company reserves the right to change any information from time to time without prior notice. The changes could also be made due to technical errors or if any problem occurs.
+
+                                                Any information shared by our clients and individuals will not be sold or exchanged with any third party without the client’s consent.
+
+                                                Beingcert does not indulge in any activity that damages the privacy of our clients. We collect information directly from our clients rather than relying upon any third party for gathering information of clients.
+
+                                                In case, if at any point of time our clients feel that the information being provided by us is incorrect, they are free to contact us. Kindly contact us at info@beingcert.com
+
+                                                Our website may have links to other third party websites or services. Beingcert does not control or own the privacy policies, practices or content of those third parties.
+
+                                                As our client you must acknowledge and agree that Beingcert shall not be held responsible in case of any damage or loss caused to you by any such third party services.
+
+                                                Beingcert will require your personal information like name, age, email, address, phone no, postal address and other details related to the examination for which you have registered. Once the client registers for the exam, Beingcert will provide a password that strictly needs to be kept confidential by the client.
+
+                                                Company will also require your personal details to administer, assess and develop examinations. Company shall not be held responsible if any details shared with us are false or inaccurate in any aspect.
+
+                                                Cookies being used by Beingcert are strictly in accordance with the law and have been created to enhance a user’s online experience and keep a track of the website’s performance.
+
+                                                In the case of cookies being disabled by a user Beingcert shall not be held responsible for any kind of error in the functioning of all the services and features on the website.    
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item" id="accordion-item-3">
+                                            <h2 class="accordion-header" id="flush-headingThree">
+                                              <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree1" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Cancellation Policy
+                                              </button>
+                                            </h2>
+                                            <div id="flush-collapseThree1" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                              <div class="accordion-body " style="overflow: auto; height: 90px;"  >
+                                                Cancellations by Candidate:
+
+                                                A candidate has an option of scheduling an exam either by visiting the Test Center directly or through the Beingcert Site.
+                                                
+                                                If a candidate schedules an exam directly through the Test Center and in case, the candidate wants to cancel the exam, he/she needs to get it done through the Test Center only.
+                                                
+                                                The cancellation of the exam solely depends upon the reason being produced by the candidate.
+                                                
+                                                In the event of any cancellation of exam the candidate needs to produce a valid reason.
+                                                
+                                                Cancellation at the test center can take place even a minute before the start of the exam, if requested by the candidate.
+                                                
+                                                In such a case, no cancellation fee will be charged to the candidate, provided the reason given for cancellation is a valid one.
+                                                
+                                                However, in the case where an exam is scheduled online through the Beingcert Site, the candidate can get the exam cancelled, if required, but only by contacting the Support Team.
+                                                
+                                                If an exam is booked online by the candidate, visiting a test center for cancellation of the exam will not help.
+                                                
+                                                For getting the exam cancelled without any charges, the candidate needs to contact the support team atleast 48 hrs before the test.
+                                                
+                                                In case the candidate fails to do so and requests for cancellation of the exam when less than 48hrs are left, a cancellation fee of 50$ will be charged and the remaining amount of the exam fee will be refunded to the candidate.
+                                                
+                                                Its mandatory for a candidate to provide a valid reason for getting his/her exam cancelled.
+                                                
+                                                Cancellations by Beingcert:
+                                                
+                                                A candidate has an option of scheduling an exam either by visiting the Test Center directly or through the Beingcert Site.
+                                                
+                                                Its mandatory for a candidate to provide a valid reason for getting his/her exam cancelled.
+                                               </div>
+                                            </div>
+                                          </div>
+                                          <div class="accordion-item" id="accordion-item-3">
+                                            <h2 class="accordion-header" id="flush-headingThree">
+                                              <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Re-Schedule Policy
+                                              </button>
+                                            </h2>
+                                            <div id="flush-collapseThree3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                              <div class="accordion-body " style="overflow: auto; height: 90px;"  >
+                                                Reschedule by Candidate:
+
+                                                candidate has an option of rescheduling the exam either by visiting the Test Center directly or through the Beingcert Site.
+
+                                                If a candidate registers for an exam by visiting the Test Center and in case, the candidate wants to reschedule the exam, he/she needs to get it done through the Test Center only.
+
+                                                The rescheduling of the exam solely depends upon the reason being produced by the candidate.
+
+                                                In the event of rescheduling of an exam the candidate needs to produce a valid reason.
+
+                                                Rescheduling can take place even a minute before the start of the exam, if requested by the candidate.
+
+                                                In such a case, no fee will be charged to the candidate, provided the reason given for getting the exam rescheduled is a valid one.
+
+                                                However, in the case where an exam is scheduled online through the Beingcert Site, the candidate may get the exam rescheduled, if required, but only by contacting the Support Team.
+
+                                                If an exam is booked online by the candidate, visiting a test center for rescheduling of the exam will not help
+
+                                                The candidate needs to contact the support team atleast 48 hrs before the test.
+
+                                                In case the candidate fails to do so and requests for rescheduling of the exam when less than 48hrs are left, a fee of 50$ will be charged for rescheduling./p>
+
+                                                Its mandatory for a candidate to provide a valid reason for getting his/her exam rescheduled.
+
+                                                Reschedule by Beingcert:
+
+                                                Beingcert reserves the right to cancel or reschedule an exam at any time, including but not limited to insufficient registrations or unavailability of test center or due to unforeseen circumstances
+
+                                                In such a case, candidates will not be charged anything for the future date allotted for the exam.
+                                               </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                </div>
+                            </div>
+
+    
+                        </div>
+                    </div>
+                   
+                    
+                  </div>
+               
+              </div>
+              
+        </section>
+
+
+    </div>
+    <footer class="mt-5 pt-5"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="f-logo">
+                        <img src="img/white-Logo.png" class="img-fluid">
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="quick-links">
+                        <h5>Links </h5>
+                        <ul>
+                            <li><a href="certificate.html">Home </a></li>
+                            <li><a href="about.html">About Us </a></li>
+                            <li><a href="contact.html">Contact Us </a></li>
+                            <li><a href="vaild-certificate.html">Blog </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="quick-links">
+                        <h5>Partners </h5>
+                        <ul>
+                            <li><a href="#">Academic Partner</a></li>
+                            <li><a href="#">Delivery Partner</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quick-links">
+                        <h5>Candidates </h5>
+                        <ul>
+                            <li><a href="#">Locate Test Center</a></li>
+                            <li><a href="#">Find An Authorized Training Partner</a></li>
+                            <li><a href="#">Validate Certificate</a></li>
+                            <li><a href="#">FAQ's </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="quick-links">
+                        <h5>Policies </h5>
+                        <ul>
+                            <li><a href="#">Refund Policy </a></li>
+                            <li><a href="#">Privacy Policy </a></li>
+                            <li><a href="#">Terms of Use </a></li>
+                            <li><a href="#">Monitoring Gateway </a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-   
+        <div class="copyright">
+            <p>
+                All Right Reserved 2024. Certaining 
+            </p>
+        </div>
+    </footer>
+</body>
+    
