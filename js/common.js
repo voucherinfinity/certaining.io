@@ -252,3 +252,48 @@ document.getElementById('btnradio2').addEventListener('change', function() {
         document.getElementById('registerForm').style.display = 'block';
     }
 });
+
+
+
+
+//-------- student panel -------//
+
+function showActiveDiv(divId) {
+    // Hide all divs
+    var divs = document.getElementsByClassName('student-panel');
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('active');
+    }
+
+    // Show the active div
+    var activeDiv = document.getElementById(divId);
+    activeDiv.classList.add('active');
+}
+
+
+
+//----------dsjkhgbkfdjg--------//
+
+function toggleFields() {
+    const occupation = document.getElementById('ddCenterCountryd').value;
+    const companyName = document.getElementById('companyNamed');
+    const designation = document.getElementById('designationd');
+    
+    if (occupation === '-student') {
+        companyNamed.disabled = true;
+        designationd.disabled = true;
+    } else {
+        companyNamed.disabled = false;
+        designationd.disabled = false;
+    }
+}
+
+//--------------candidate panel examdropdown hinde --------//
+document.getElementById('candidatecounty').addEventListener('change', function() {
+    var examSection = document.getElementById('exam-section');
+    if (this.value !== "Please select Country *") {
+        examSection.style.display = 'block';
+    } else {
+        examSection.style.display = 'none';
+    }
+});

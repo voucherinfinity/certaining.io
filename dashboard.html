@@ -209,22 +209,23 @@
         <!---header end---->
         <section class="admin-wrap">
             <div class="">
-                <div class="sidebar" style="position: fixed;">
+                <!-----left side banner------->
+                <div class="sidebar" style="position: fixed; z-index: 1;">
                   <ul class="nav flex-column " style="padding-top: 5rem;">
                     
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
+                    <li class="nav-item" onclick="showActiveDiv('Dashboard')">
+                      <a class="nav-link" href="#" >
                         <i class="bi bi-house-door"></i>
-                        <span class="menu-text">Dashboard</span>
+                        <span class="menu-text"  >Dashboard</span>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
+                    <li class="nav-item" onclick="showActiveDiv('Shedule-New-Exam')">
+                      <a class="nav-link" href="#" >
                         <i class="bi bi-laptop"></i>
-                        <span class="menu-text">Shedule New Exam</span>
+                        <span class="menu-text"  >Shedule New Exam</span>
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" onclick="showActiveDiv('Re-Shedule-Exam')">
                         <a href="#" class="nav-link">
                             <i class="bi bi-copy"></i>
                             <span class="menu-text">Re-Shedule Exam</span>
@@ -271,8 +272,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="content1">
-                   
+
+                <!---dashboard------>
+                <div class="content1 student-panel active" id="Dashboard">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -507,11 +509,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" mt-2  " style="border-radius: 30px;">
+                                <div class=" mt-2 pe-2 ps-3 " style="border-radius: 30px; background: #fff; border: 1px solid #ccc;" >
+                                    <button class="nav-links pt-2 pb-2 pr-2 pl-4 m-3 active" style="background-color: #007388; width: 7rem; border-radius: 22px; " id="nav-Mission-tab" data-bs-toggle="tab" data-bs-target="#Mission" type="button" role="tab" aria-controls="nav-Mission-tab" aria-selected="true">
+                                        <span style="color: white;" class="pt-5">POLICIES                                        </span>
+                                    </button>
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
                                         <div class="accordion-item" id="accordion-item-1">
                                           <h2 class="accordion-header" id="flush-headingOne">
-                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white; border-radius: 20px;"  type="button"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                               Terms of Use
                                             </button>
                                           </h2>
@@ -542,7 +547,7 @@
                                         </div>
                                         <div class="accordion-item" id="accordion-item-2">
                                           <h2 class="accordion-header" id="flush-headingTwo">
-                                            <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black; border-radius: 20px;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                                 Refund Policy
                                             </button>
                                           </h2>
@@ -571,7 +576,7 @@
                                         </div>
                                         <div class="accordion-item" id="accordion-item-3">
                                           <h2 class="accordion-header" id="flush-headingThree">
-                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            <button class="accordion-button collapsed" style="background-color: #007388; color: white; border-radius: 20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 Privacy Policy
                                             </button>
                                           </h2>
@@ -603,7 +608,7 @@
                                         </div>
                                         <div class="accordion-item" id="accordion-item-3">
                                             <h2 class="accordion-header" id="flush-headingThree">
-                                              <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree1" aria-expanded="false" aria-controls="flush-collapseThree">
+                                              <button class="accordion-button collapsed" style="background-color: #05e7f9; color: black; border-radius: 20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree1" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 Cancellation Policy
                                               </button>
                                             </h2>
@@ -643,7 +648,7 @@
                                           </div>
                                           <div class="accordion-item" id="accordion-item-3">
                                             <h2 class="accordion-header" id="flush-headingThree">
-                                              <button class="accordion-button collapsed" style="background-color: #007388; color: white;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree">
+                                              <button class="accordion-button collapsed" style="background-color: #007388; color: white; border-radius: 20px;"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree3" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 Re-Schedule Policy
                                               </button>
                                             </h2>
@@ -690,8 +695,1421 @@
                     </div>
                    
                     
-                  </div>
-               
+                </div>
+                
+                <!----Shedule new Exam----->
+                <div class="content1 student-panel" id="Shedule-New-Exam">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <h1 class="heading">Shedule New Exam</h1>
+                                <div class="card px-0  pb-0  mb-3">
+                                    <h2 id="heading"></h2>
+                                    <p>Fill The Form Below to Shedule New Exam </p>
+                    
+                                    <form id="msform">
+                                       
+                                        <ul id="progressbar">
+                                            <li class="active" id="account"><strong>Fill Information </strong></li>
+                                            <li id="personal"><strong>Select Exam</strong></li>
+                                            <li id="payment"><strong>Review Details </strong></li>
+                                            <li id="confirm"><strong>Payment  </strong></li>
+                                        </ul>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="25" aria-valuemax="100"></div>
+                                        </div>
+                                        <br>
+                                       
+                                        <fieldset>
+                                            <div class="form-card">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                       <p>Personal Information (*) fields are required </p> 
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h2 class="steps">Step 1 - 4</h2>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels">First Name:*</label>
+                                                        <input type="Text" name="text" placeholder="First Name"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                                        <label class="fieldlabels">Middle Name: *</label>
+                                                        <input type="text" name="text" placeholder="Middle Name"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label for="date" class="fieldlabels">Last Name: *</label>
+                                                        <input type="text" name="text" id="date" placeholder="Last Name"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label for="" class="fieldlabels">Gender: *</label>
+                                                            <select class="form-control" id="ddCenterCountry">
+                                                                <option value="-1" disabled selected >Gender*</option>
+                                                                <option value="-1">Male</option>
+                                                                <option value="-1">Female</option>
+
+                                                            </select>                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label  class="fieldlabels">DOB: *</label>
+                                                        <input type="date" id="date"  placeholder="Date Of Birth"/>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels">Occupation: *</label>
+                                                        <select class="form-control" id="ddCenterCountryd" onchange="toggleFields()">
+                                                            <option value="-1" disabled selected>Occupation*</option>
+                                                            <option value="-professional">Working Professional</option>
+                                                            <option value="-student">Student</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels">Company Name:*</label>
+                                                        <input type="text" id="companyNamed" placeholder="Enter Company Name">
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                                        <label for="exampleFormControlSelect2">Designation</label>
+                                                        <input type="text" id="designationd" placeholder="Enter Designation">
+                                                    </div>                                      
+                                                </div>
+
+                                                <div class="row">
+                                                    <p>Contact Information (*) fields are required  </p>
+                                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                                        <div class="form-group">
+                                                            <label for="" class="fieldlabels">Email: *</label>
+                                                            <input type="email" id="email" placeholder="Enter Email">                                          
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                                        <div class="form-group">
+                                                            <label for="" class="fieldlabels">Mobile Number: *</label>
+                                                            <input type="number" id="number" placeholder="Enter Mobile Number">                                         
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-2">
+                                                        <div class="form-group">
+                                                            <label for="" class="fieldlabels">Phone Number: *</label>
+                                                            <input type="number" id="number" placeholder="Enter Phone Number">                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >Current Address</label>
+                                                        <input type="text" name="text" placeholder="Enter Current Address">
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >Permanent Address:</label>
+                                                        <input type="number" name="number" placeholder="Enter Permanent Resident Address">  
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >Country:*</label>
+                                                        <select class="form-control" id="ddCenterCountry">
+                                                            <option value="Please select Country  *" disabled selected>Please select Country *</option>
+                                                                <option value="  AF:Afghanistan  ">  AF:Afghanistan  </option>
+                                                                <option value="  AX:Åland Islands    ">  AX:Åland Islands    </option>
+                                                                <option value="  AL:Albania  ">  AL:Albania  </option>
+                                                                <option value="  DZ:Algeria  ">  DZ:Algeria  </option>
+                                                                <option value="  AS:American Samoa   ">  AS:American Samoa   </option>
+                                                                <option value="  AD:Andorra  ">  AD:Andorra  </option>
+                                                                <option value="  AO:Angola   ">  AO:Angola   </option>
+                                                                <option value="  AI:Anguilla ">  AI:Anguilla </option>
+                                                                <option value="  AQ:Antarctica   ">  AQ:Antarctica   </option>
+                                                                <option value="  AG:Antigua and Barbuda  ">  AG:Antigua and Barbuda  </option>
+                                                                <option value="  AR:Argentina    ">  AR:Argentina    </option>
+                                                                <option value="  AM:Armenia  ">  AM:Armenia  </option>
+                                                                <option value="  AW:Aruba    ">  AW:Aruba    </option>
+                                                                <option value="  AU:Australia    ">  AU:Australia    </option>
+                                                                <option value="  AT:Austria  ">  AT:Austria  </option>
+                                                                <option value="  AZ:Azerbaijan   ">  AZ:Azerbaijan   </option>
+                                                                <option value="  BS:Bahamas  ">  BS:Bahamas  </option>
+                                                                <option value="  BH:Bahrain  ">  BH:Bahrain  </option>
+                                                                <option value="  BD:Bangladesh   ">  BD:Bangladesh   </option>
+                                                                <option value="  BB:Barbados ">  BB:Barbados </option>
+                                                                <option value="  BY:Belarus  ">  BY:Belarus  </option>
+                                                                <option value="  BE:Belgium  ">  BE:Belgium  </option>
+                                                                <option value="  BZ:Belize   ">  BZ:Belize   </option>
+                                                                <option value="  BJ:Benin    ">  BJ:Benin    </option>
+                                                                <option value="  BM:Bermuda  ">  BM:Bermuda  </option>
+                                                                <option value="  BT:Bhutan   ">  BT:Bhutan   </option>
+                                                                <option value="  BO:Bolivia  ">  BO:Bolivia  </option>
+                                                                <option value="  BA:Bosnia and Herzegovina   ">  BA:Bosnia and Herzegovina   </option>
+                                                                <option value="  BW:Botswana ">  BW:Botswana </option>
+                                                                <option value="  BV:Bouvet Island    ">  BV:Bouvet Island    </option>
+                                                                <option value="  BR:Brazil   ">  BR:Brazil   </option>
+                                                                <option value="  IO:British Indian Ocean Territory   ">  IO:British Indian Ocean Territory   </option>
+                                                                <option value="  BN:Brunei Darussalam    ">  BN:Brunei Darussalam    </option>
+                                                                <option value="  BG:Bulgaria ">  BG:Bulgaria </option>
+                                                                <option value="  BF:Burkina Faso ">  BF:Burkina Faso </option>
+                                                                <option value="  BI:Burundi  ">  BI:Burundi  </option>
+                                                                <option value="  KH:Cambodia ">  KH:Cambodia </option>
+                                                                <option value="  CM:Cameroon ">  CM:Cameroon </option>
+                                                                <option value="  CA:Canada   ">  CA:Canada   </option>
+                                                                <option value="  CV:Cape Verde   ">  CV:Cape Verde   </option>
+                                                                <option value="  KY:Cayman Islands   ">  KY:Cayman Islands   </option>
+                                                                <option value="  CF:Central African Republic ">  CF:Central African Republic </option>
+                                                                <option value="  TD:Chad ">  TD:Chad </option>
+                                                                <option value="  CL:Chile    ">  CL:Chile    </option>
+                                                                <option value="  CN:China    ">  CN:China    </option>
+                                                                <option value="  CX:Christmas Island ">  CX:Christmas Island </option>
+                                                                <option value="  CC:Cocos (Keeling) Islands  ">  CC:Cocos (Keeling) Islands  </option>
+                                                                <option value="  CO:Colombia ">  CO:Colombia </option>
+                                                                <option value="  KM:Comoros  ">  KM:Comoros  </option>
+                                                                <option value="  CG:Congo    ">  CG:Congo    </option>
+                                                                <option value="  CD:Congo, The Democratic Republic of The    ">  CD:Congo, The Democratic Republic of The    </option>
+                                                                <option value="  CK:Cook Islands ">  CK:Cook Islands </option>
+                                                                <option value="  CR:Costa Rica   ">  CR:Costa Rica   </option>
+                                                                <option value="  CI:Cote D'ivoire    ">  CI:Cote D'ivoire    </option>
+                                                                <option value="  HR:Croatia  ">  HR:Croatia  </option>
+                                                                <option value="  CU:Cuba ">  CU:Cuba </option>
+                                                                <option value="  CY:Cyprus   ">  CY:Cyprus   </option>
+                                                                <option value="  CZ:Czech Republic   ">  CZ:Czech Republic   </option>
+                                                                <option value="  DK:Denmark  ">  DK:Denmark  </option>
+                                                                <option value="  DJ:Djibouti ">  DJ:Djibouti </option>
+                                                                <option value="  DM:Dominica ">  DM:Dominica </option>
+                                                                <option value="  DO:Dominican Republic   ">  DO:Dominican Republic   </option>
+                                                                <option value="  EC:Ecuador  ">  EC:Ecuador  </option>
+                                                                <option value="  EG:Egypt    ">  EG:Egypt    </option>
+                                                                <option value="  SV:El Salvador  ">  SV:El Salvador  </option>
+                                                                <option value="  GQ:Equatorial Guinea    ">  GQ:Equatorial Guinea    </option>
+                                                                <option value="  ER:Eritrea  ">  ER:Eritrea  </option>
+                                                                <option value="  EE:Estonia  ">  EE:Estonia  </option>
+                                                                <option value="  ET:Ethiopia ">  ET:Ethiopia </option>
+                                                                <option value="  FK:Falkland Islands (Malvinas)  ">  FK:Falkland Islands (Malvinas)  </option>
+                                                                <option value="  FO:Faroe Islands    ">  FO:Faroe Islands    </option>
+                                                                <option value="  FJ:Fiji ">  FJ:Fiji </option>
+                                                                <option value="  FI:Finland  ">  FI:Finland  </option>
+                                                                <option value="  FR:France   ">  FR:France   </option>
+                                                                <option value="  GF:French Guiana    ">  GF:French Guiana    </option>
+                                                                <option value="  PF:French Polynesia ">  PF:French Polynesia </option>
+                                                                <option value="  TF:French Southern Territories  ">  TF:French Southern Territories  </option>
+                                                                <option value="  GA:Gabon    ">  GA:Gabon    </option>
+                                                                <option value="  GM:Gambia   ">  GM:Gambia   </option>
+                                                                <option value="  GE:Georgia  ">  GE:Georgia  </option>
+                                                                <option value="  DE:Germany  ">  DE:Germany  </option>
+                                                                <option value="  GH:Ghana    ">  GH:Ghana    </option>
+                                                                <option value="  GI:Gibraltar    ">  GI:Gibraltar    </option>
+                                                                <option value="  GR:Greece   ">  GR:Greece   </option>
+                                                                <option value="  GL:Greenland    ">  GL:Greenland    </option>
+                                                                <option value="  GD:Grenada  ">  GD:Grenada  </option>
+                                                                <option value="  GP:Guadeloupe   ">  GP:Guadeloupe   </option>
+                                                                <option value="  GU:Guam ">  GU:Guam </option>
+                                                                <option value="  GT:Guatemala    ">  GT:Guatemala    </option>
+                                                                <option value="  GG:Guernsey ">  GG:Guernsey </option>
+                                                                <option value="  GN:Guinea   ">  GN:Guinea   </option>
+                                                                <option value="  GW:Guinea-bissau    ">  GW:Guinea-bissau    </option>
+                                                                <option value="  GY:Guyana   ">  GY:Guyana   </option>
+                                                                <option value="  HT:Haiti    ">  HT:Haiti    </option>
+                                                                <option value="  HM:Heard Island and Mcdonald Islands    ">  HM:Heard Island and Mcdonald Islands    </option>
+                                                                <option value="  VA:Holy See (Vatican City State)    ">  VA:Holy See (Vatican City State)    </option>
+                                                                <option value="  HN:Honduras ">  HN:Honduras </option>
+                                                                <option value="  HK:Hong Kong    ">  HK:Hong Kong    </option>
+                                                                <option value="  HU:Hungary  ">  HU:Hungary  </option>
+                                                                <option value="  IS:Iceland  ">  IS:Iceland  </option>
+                                                                <option value="  IN:India    ">  IN:India    </option>
+                                                                <option value="  ID:Indonesia    ">  ID:Indonesia    </option>
+                                                                <option value="  IR:Iran, Islamic Republic of    ">  IR:Iran, Islamic Republic of    </option>
+                                                                <option value="  IQ:Iraq ">  IQ:Iraq </option>
+                                                                <option value="  IE:Ireland  ">  IE:Ireland  </option>
+                                                                <option value="  IM:Isle of Man  ">  IM:Isle of Man  </option>
+                                                                <option value="  IL:Israel   ">  IL:Israel   </option>
+                                                                <option value="  IT:Italy    ">  IT:Italy    </option>
+                                                                <option value="  JM:Jamaica  ">  JM:Jamaica  </option>
+                                                                <option value="  JP:Japan    ">  JP:Japan    </option>
+                                                                <option value="  JE:Jersey   ">  JE:Jersey   </option>
+                                                                <option value="  JO:Jordan   ">  JO:Jordan   </option>
+                                                                <option value="  KZ:Kazakhstan   ">  KZ:Kazakhstan   </option>
+                                                                <option value="  KE:Kenya    ">  KE:Kenya    </option>
+                                                                <option value="  KI:Kiribati ">  KI:Kiribati </option>
+                                                                <option value="  KP:Korea, Democratic People's Republic of   ">  KP:Korea, Democratic People's Republic of   </option>
+                                                                <option value="  KR:Korea, Republic of   ">  KR:Korea, Republic of   </option>
+                                                                <option value="  KW:Kuwait   ">  KW:Kuwait   </option>
+                                                                <option value="  KG:Kyrgyzstan   ">  KG:Kyrgyzstan   </option>
+                                                                <option value="  LA:Lao People's Democratic Republic ">  LA:Lao People's Democratic Republic </option>
+                                                                <option value="  LV:Latvia   ">  LV:Latvia   </option>
+                                                                <option value="  LB:Lebanon  ">  LB:Lebanon  </option>
+                                                                <option value="  LS:Lesotho  ">  LS:Lesotho  </option>
+                                                                <option value="  LR:Liberia  ">  LR:Liberia  </option>
+                                                                <option value="  LY:Libyan Arab Jamahiriya   ">  LY:Libyan Arab Jamahiriya   </option>
+                                                                <option value="  LI:Liechtenstein    ">  LI:Liechtenstein    </option>
+                                                                <option value="  LT:Lithuania    ">  LT:Lithuania    </option>
+                                                                <option value="  LU:Luxembourg   ">  LU:Luxembourg   </option>
+                                                                <option value="  MO:Macao    ">  MO:Macao    </option>
+                                                                <option value="  MK:Macedonia The Former Yugoslav Republic of ">  MK:Macedonia The Former Yugoslav Republic of </option>
+                                                                <option value="  MG:Madagascar   ">  MG:Madagascar   </option>
+                                                                <option value="  MW:Malawi   ">  MW:Malawi   </option>
+                                                                <option value="  MY:Malaysia ">  MY:Malaysia </option>
+                                                                <option value="  MV:Maldives ">  MV:Maldives </option>
+                                                                <option value="  ML:Mali ">  ML:Mali </option>
+                                                                <option value="  MT:Malta    ">  MT:Malta    </option>
+                                                                <option value="  MH:Marshall Islands ">  MH:Marshall Islands </option>
+                                                                <option value="  MQ:Martinique   ">  MQ:Martinique   </option>
+                                                                <option value="  MR:Mauritania   ">  MR:Mauritania   </option>
+                                                                <option value="  MU:Mauritius    ">  MU:Mauritius    </option>
+                                                                <option value="  YT:Mayotte  ">  YT:Mayotte  </option>
+                                                                <option value="  MX:Mexico   ">  MX:Mexico   </option>
+                                                                <option value="  FM:Micronesia, Federated States of  ">  FM:Micronesia, Federated States of  </option>
+                                                                <option value="  MD:Moldova, Republic of ">  MD:Moldova, Republic of </option>
+                                                                <option value="  MC:Monaco   ">  MC:Monaco   </option>
+                                                                <option value="  MN:Mongolia ">  MN:Mongolia </option>
+                                                                <option value="  ME:Montenegro   ">  ME:Montenegro   </option>
+                                                                <option value="  MS:Montserrat   ">  MS:Montserrat   </option>
+                                                                <option value="  MA:Morocco  ">  MA:Morocco  </option>
+                                                                <option value="  MZ:Mozambique   ">  MZ:Mozambique   </option>
+                                                                <option value="  MM:Myanmar  ">  MM:Myanmar  </option>
+                                                                <option value="  NA:Namibia  ">  NA:Namibia  </option>
+                                                                <option value="  NR:Nauru    ">  NR:Nauru    </option>
+                                                                <option value="  NP:Nepal    ">  NP:Nepal    </option>
+                                                                <option value="  NL:Netherlands  ">  NL:Netherlands  </option>
+                                                                <option value="  AN:Netherlands Antilles ">  AN:Netherlands Antilles </option>
+                                                                <option value="  NC:New Caledonia    ">  NC:New Caledonia    </option>
+                                                                <option value="  NZ:New Zealand  ">  NZ:New Zealand  </option>
+                                                                <option value="  NI:Nicaragua    ">  NI:Nicaragua    </option>
+                                                                <option value="  NE:Niger    ">  NE:Niger    </option>
+                                                                <option value="  NG:Nigeria  ">  NG:Nigeria  </option>
+                                                                <option value="  NU:Niue ">  NU:Niue </option>
+                                                                <option value="  NF:Norfolk Island   ">  NF:Norfolk Island   </option>
+                                                                <option value="  MP:Northern Mariana Islands ">  MP:Northern Mariana Islands </option>
+                                                                <option value="  NO:Norway   ">  NO:Norway   </option>
+                                                                <option value="  OM:Oman ">  OM:Oman </option>
+                                                                <option value="  PK:Pakistan ">  PK:Pakistan </option>
+                                                                <option value="  PW:Palau    ">  PW:Palau    </option>
+                                                                <option value="  PS:Palestinian Territory, Occupied  ">  PS:Palestinian Territory, Occupied  </option>
+                                                                <option value="  PA:Panama   ">  PA:Panama   </option>
+                                                                <option value="  PG:Papua New Guinea ">  PG:Papua New Guinea </option>
+                                                                <option value="  PY:Paraguay ">  PY:Paraguay </option>
+                                                                <option value="  PE:Peru ">  PE:Peru </option>
+                                                                <option value="  PH:Philippines  ">  PH:Philippines  </option>
+                                                                <option value="  PN:Pitcairn ">  PN:Pitcairn </option>
+                                                                <option value="  PL:Poland   ">  PL:Poland   </option>
+                                                                <option value="  PT:Portugal ">  PT:Portugal </option>
+                                                                <option value="  PR:Puerto Rico  ">  PR:Puerto Rico  </option>
+                                                                <option value="  QA:Qatar    ">  QA:Qatar    </option>
+                                                                <option value="  RE:Reunion  ">  RE:Reunion  </option>
+                                                                <option value="  RO:Romania  ">  RO:Romania  </option>
+                                                                <option value="  RU:Russian Federation   ">  RU:Russian Federation   </option>
+                                                                <option value="  RW:Rwanda   ">  RW:Rwanda   </option>
+                                                                <option value="  SH:Saint Helena ">  SH:Saint Helena </option>
+                                                                <option value="  KN:Saint Kitts and Nevis    ">  KN:Saint Kitts and Nevis    </option>
+                                                                <option value="  LC:Saint Lucia  ">  LC:Saint Lucia  </option>
+                                                                <option value="  PM:Saint Pierre and Miquelon    ">  PM:Saint Pierre and Miquelon    </option>
+                                                                <option value="  VC:Saint Vincent and The Grenadines ">  VC:Saint Vincent and The Grenadines </option>
+                                                                <option value="  WS:Samoa    ">  WS:Samoa    </option>
+                                                                <option value="  SM:San Marino   ">  SM:San Marino   </option>
+                                                                <option value="  ST:Sao Tome and Principe    ">  ST:Sao Tome and Principe    </option>
+                                                                <option value="  SA:Saudi Arabia ">  SA:Saudi Arabia </option>
+                                                                <option value="  SN:Senegal  ">  SN:Senegal  </option>
+                                                                <option value="  RS:Serbia   ">  RS:Serbia   </option>
+                                                                <option value="  SC:Seychelles   ">  SC:Seychelles   </option>
+                                                                <option value="  SL:Sierra Leone ">  SL:Sierra Leone </option>
+                                                                <option value="  SG:Singapore    ">  SG:Singapore    </option>
+                                                                <option value="  SK:Slovakia ">  SK:Slovakia </option>
+                                                                <option value="  SI:Slovenia ">  SI:Slovenia </option>
+                                                                <option value="  SB:Solomon Islands  ">  SB:Solomon Islands  </option>
+                                                                <option value="  SO:Somalia  ">  SO:Somalia  </option>
+                                                                <option value="  ZA:South Africa ">  ZA:South Africa </option>
+                                                                <option value="  GS:South Georgia and The South Sandwich Islands ">  GS:South Georgia and The South Sandwich Islands </option>
+                                                                <option value="  ES:Spain    ">  ES:Spain    </option>
+                                                                <option value="  LK:Sri Lanka    ">  LK:Sri Lanka    </option>
+                                                                <option value="  SD:Sudan    ">  SD:Sudan    </option>
+                                                                <option value="  SR:Suriname ">  SR:Suriname </option>
+                                                                <option value="  SJ:Svalbard and Jan Mayen   ">  SJ:Svalbard and Jan Mayen   </option>
+                                                                <option value="  SZ:Swaziland    ">  SZ:Swaziland    </option>
+                                                                <option value="  SE:Sweden   ">  SE:Sweden   </option>
+                                                                <option value="  CH:Switzerland  ">  CH:Switzerland  </option>
+                                                                <option value="  SY:Syrian Arab Republic ">  SY:Syrian Arab Republic </option>
+                                                                <option value="  TW:Taiwan, Province of China    ">  TW:Taiwan, Province of China    </option>
+                                                                <option value="  TJ:Tajikistan   ">  TJ:Tajikistan   </option>
+                                                                <option value="  TZ:Tanzania, United Republic of ">  TZ:Tanzania, United Republic of </option>
+                                                                <option value="  TH:Thailand ">  TH:Thailand </option>
+                                                                <option value="  TL:Timor-leste  ">  TL:Timor-leste  </option>
+                                                                <option value="  TG:Togo ">  TG:Togo </option>
+                                                                <option value="  TK:Tokelau  ">  TK:Tokelau  </option>
+                                                                <option value="  TO:Tonga    ">  TO:Tonga    </option>
+                                                                <option value="  TT:Trinidad and Tobago  ">  TT:Trinidad and Tobago  </option>
+                                                                <option value="  TN:Tunisia  ">  TN:Tunisia  </option>
+                                                                <option value="  TR:Turkey   ">  TR:Turkey   </option>
+                                                                <option value="  TM:Turkmenistan ">  TM:Turkmenistan </option>
+                                                                <option value="  TC:Turks and Caicos Islands ">  TC:Turks and Caicos Islands </option>
+                                                                <option value="  TV:Tuvalu   ">  TV:Tuvalu   </option>
+                                                                <option value="  UG:Uganda   ">  UG:Uganda   </option>
+                                                                <option value="  UA:Ukraine  ">  UA:Ukraine  </option>
+                                                                <option value="  AE:United Arab Emirates ">  AE:United Arab Emirates </option>
+                                                                <option value="  GB:United Kingdom   ">  GB:United Kingdom   </option>
+                                                                <option value="  US:United States    ">  US:United States    </option>
+                                                                <option value="  UM:United States Minor Outlying Islands ">  UM:United States Minor Outlying Islands </option>
+                                                                <option value="  UY:Uruguay  ">  UY:Uruguay  </option>
+                                                                <option value="  UZ:Uzbekistan   ">  UZ:Uzbekistan   </option>
+                                                                <option value="  VU:Vanuatu  ">  VU:Vanuatu  </option>
+                                                                <option value="  VE:Venezuela    ">  VE:Venezuela    </option>
+                                                                <option value="  VN:Viet Nam ">  VN:Viet Nam </option>
+                                                                <option value="  VG:Virgin Islands, British  ">  VG:Virgin Islands, British  </option>
+                                                                <option value="  VI:Virgin Islands, U.S. ">  VI:Virgin Islands, U.S. </option>
+                                                                <option value="  WF:Wallis and Futuna    ">  WF:Wallis and Futuna    </option>
+                                                                <option value="  EH:Western Sahara   ">  EH:Western Sahara   </option>
+                                                                <option value="  YE:Yemen    ">  YE:Yemen    </option>
+                                                                <option value="  ZM:Zambia   ">  ZM:Zambia   </option>
+                                                                <option value="  ZW:Zimbabwe ">  ZW:Zimbabwe </option>
+
+                                                        </select>   
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >State: *</label>
+                                                        <input type="number" name="number" placeholder="Enter State">
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >City: *</label>
+                                                        <input type="text" name="text" placeholder="Enter City">  
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >Pincode: *</label>
+                                                        <input type="number" name="number" placeholder="Enter Pincode">  
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >Candidate ID</label>
+                                                        <input type="text" name="text" placeholder="20136547862" disabled>
+                                                    </div>
+
+                                                </div>                                                                                              
+                                             </div>
+                                            <input type="button" name="next" class="next action-button" value="Next"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="form-card">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Fill Exams Details (*) fields are required </h2>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h2 class="steps">Step 2 - 4</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                       
+                                                        <label class="fieldlabels"  >Country:</label>
+                                                        <select class="form-control" id="candidatecounty"">
+                                                            <option value="Please select Country  *" disabled selected>Please select Country *</option>
+                                                                <option value="  AF:Afghanistan  ">  AF:Afghanistan  </option>
+                                                                <option value="  AX:Åland Islands    ">  AX:Åland Islands    </option>
+                                                                <option value="  AL:Albania  ">  AL:Albania  </option>
+                                                                <option value="  DZ:Algeria  ">  DZ:Algeria  </option>
+                                                                <option value="  AS:American Samoa   ">  AS:American Samoa   </option>
+                                                                <option value="  AD:Andorra  ">  AD:Andorra  </option>
+                                                                <option value="  AO:Angola   ">  AO:Angola   </option>
+                                                                <option value="  AI:Anguilla ">  AI:Anguilla </option>
+                                                                <option value="  AQ:Antarctica   ">  AQ:Antarctica   </option>
+                                                                <option value="  AG:Antigua and Barbuda  ">  AG:Antigua and Barbuda  </option>
+                                                                <option value="  AR:Argentina    ">  AR:Argentina    </option>
+                                                                <option value="  AM:Armenia  ">  AM:Armenia  </option>
+                                                                <option value="  AW:Aruba    ">  AW:Aruba    </option>
+                                                                <option value="  AU:Australia    ">  AU:Australia    </option>
+                                                                <option value="  AT:Austria  ">  AT:Austria  </option>
+                                                                <option value="  AZ:Azerbaijan   ">  AZ:Azerbaijan   </option>
+                                                                <option value="  BS:Bahamas  ">  BS:Bahamas  </option>
+                                                                <option value="  BH:Bahrain  ">  BH:Bahrain  </option>
+                                                                <option value="  BD:Bangladesh   ">  BD:Bangladesh   </option>
+                                                                <option value="  BB:Barbados ">  BB:Barbados </option>
+                                                                <option value="  BY:Belarus  ">  BY:Belarus  </option>
+                                                                <option value="  BE:Belgium  ">  BE:Belgium  </option>
+                                                                <option value="  BZ:Belize   ">  BZ:Belize   </option>
+                                                                <option value="  BJ:Benin    ">  BJ:Benin    </option>
+                                                                <option value="  BM:Bermuda  ">  BM:Bermuda  </option>
+                                                                <option value="  BT:Bhutan   ">  BT:Bhutan   </option>
+                                                                <option value="  BO:Bolivia  ">  BO:Bolivia  </option>
+                                                                <option value="  BA:Bosnia and Herzegovina   ">  BA:Bosnia and Herzegovina   </option>
+                                                                <option value="  BW:Botswana ">  BW:Botswana </option>
+                                                                <option value="  BV:Bouvet Island    ">  BV:Bouvet Island    </option>
+                                                                <option value="  BR:Brazil   ">  BR:Brazil   </option>
+                                                                <option value="  IO:British Indian Ocean Territory   ">  IO:British Indian Ocean Territory   </option>
+                                                                <option value="  BN:Brunei Darussalam    ">  BN:Brunei Darussalam    </option>
+                                                                <option value="  BG:Bulgaria ">  BG:Bulgaria </option>
+                                                                <option value="  BF:Burkina Faso ">  BF:Burkina Faso </option>
+                                                                <option value="  BI:Burundi  ">  BI:Burundi  </option>
+                                                                <option value="  KH:Cambodia ">  KH:Cambodia </option>
+                                                                <option value="  CM:Cameroon ">  CM:Cameroon </option>
+                                                                <option value="  CA:Canada   ">  CA:Canada   </option>
+                                                                <option value="  CV:Cape Verde   ">  CV:Cape Verde   </option>
+                                                                <option value="  KY:Cayman Islands   ">  KY:Cayman Islands   </option>
+                                                                <option value="  CF:Central African Republic ">  CF:Central African Republic </option>
+                                                                <option value="  TD:Chad ">  TD:Chad </option>
+                                                                <option value="  CL:Chile    ">  CL:Chile    </option>
+                                                                <option value="  CN:China    ">  CN:China    </option>
+                                                                <option value="  CX:Christmas Island ">  CX:Christmas Island </option>
+                                                                <option value="  CC:Cocos (Keeling) Islands  ">  CC:Cocos (Keeling) Islands  </option>
+                                                                <option value="  CO:Colombia ">  CO:Colombia </option>
+                                                                <option value="  KM:Comoros  ">  KM:Comoros  </option>
+                                                                <option value="  CG:Congo    ">  CG:Congo    </option>
+                                                                <option value="  CD:Congo, The Democratic Republic of The    ">  CD:Congo, The Democratic Republic of The    </option>
+                                                                <option value="  CK:Cook Islands ">  CK:Cook Islands </option>
+                                                                <option value="  CR:Costa Rica   ">  CR:Costa Rica   </option>
+                                                                <option value="  CI:Cote D'ivoire    ">  CI:Cote D'ivoire    </option>
+                                                                <option value="  HR:Croatia  ">  HR:Croatia  </option>
+                                                                <option value="  CU:Cuba ">  CU:Cuba </option>
+                                                                <option value="  CY:Cyprus   ">  CY:Cyprus   </option>
+                                                                <option value="  CZ:Czech Republic   ">  CZ:Czech Republic   </option>
+                                                                <option value="  DK:Denmark  ">  DK:Denmark  </option>
+                                                                <option value="  DJ:Djibouti ">  DJ:Djibouti </option>
+                                                                <option value="  DM:Dominica ">  DM:Dominica </option>
+                                                                <option value="  DO:Dominican Republic   ">  DO:Dominican Republic   </option>
+                                                                <option value="  EC:Ecuador  ">  EC:Ecuador  </option>
+                                                                <option value="  EG:Egypt    ">  EG:Egypt    </option>
+                                                                <option value="  SV:El Salvador  ">  SV:El Salvador  </option>
+                                                                <option value="  GQ:Equatorial Guinea    ">  GQ:Equatorial Guinea    </option>
+                                                                <option value="  ER:Eritrea  ">  ER:Eritrea  </option>
+                                                                <option value="  EE:Estonia  ">  EE:Estonia  </option>
+                                                                <option value="  ET:Ethiopia ">  ET:Ethiopia </option>
+                                                                <option value="  FK:Falkland Islands (Malvinas)  ">  FK:Falkland Islands (Malvinas)  </option>
+                                                                <option value="  FO:Faroe Islands    ">  FO:Faroe Islands    </option>
+                                                                <option value="  FJ:Fiji ">  FJ:Fiji </option>
+                                                                <option value="  FI:Finland  ">  FI:Finland  </option>
+                                                                <option value="  FR:France   ">  FR:France   </option>
+                                                                <option value="  GF:French Guiana    ">  GF:French Guiana    </option>
+                                                                <option value="  PF:French Polynesia ">  PF:French Polynesia </option>
+                                                                <option value="  TF:French Southern Territories  ">  TF:French Southern Territories  </option>
+                                                                <option value="  GA:Gabon    ">  GA:Gabon    </option>
+                                                                <option value="  GM:Gambia   ">  GM:Gambia   </option>
+                                                                <option value="  GE:Georgia  ">  GE:Georgia  </option>
+                                                                <option value="  DE:Germany  ">  DE:Germany  </option>
+                                                                <option value="  GH:Ghana    ">  GH:Ghana    </option>
+                                                                <option value="  GI:Gibraltar    ">  GI:Gibraltar    </option>
+                                                                <option value="  GR:Greece   ">  GR:Greece   </option>
+                                                                <option value="  GL:Greenland    ">  GL:Greenland    </option>
+                                                                <option value="  GD:Grenada  ">  GD:Grenada  </option>
+                                                                <option value="  GP:Guadeloupe   ">  GP:Guadeloupe   </option>
+                                                                <option value="  GU:Guam ">  GU:Guam </option>
+                                                                <option value="  GT:Guatemala    ">  GT:Guatemala    </option>
+                                                                <option value="  GG:Guernsey ">  GG:Guernsey </option>
+                                                                <option value="  GN:Guinea   ">  GN:Guinea   </option>
+                                                                <option value="  GW:Guinea-bissau    ">  GW:Guinea-bissau    </option>
+                                                                <option value="  GY:Guyana   ">  GY:Guyana   </option>
+                                                                <option value="  HT:Haiti    ">  HT:Haiti    </option>
+                                                                <option value="  HM:Heard Island and Mcdonald Islands    ">  HM:Heard Island and Mcdonald Islands    </option>
+                                                                <option value="  VA:Holy See (Vatican City State)    ">  VA:Holy See (Vatican City State)    </option>
+                                                                <option value="  HN:Honduras ">  HN:Honduras </option>
+                                                                <option value="  HK:Hong Kong    ">  HK:Hong Kong    </option>
+                                                                <option value="  HU:Hungary  ">  HU:Hungary  </option>
+                                                                <option value="  IS:Iceland  ">  IS:Iceland  </option>
+                                                                <option value="  IN:India    ">  IN:India    </option>
+                                                                <option value="  ID:Indonesia    ">  ID:Indonesia    </option>
+                                                                <option value="  IR:Iran, Islamic Republic of    ">  IR:Iran, Islamic Republic of    </option>
+                                                                <option value="  IQ:Iraq ">  IQ:Iraq </option>
+                                                                <option value="  IE:Ireland  ">  IE:Ireland  </option>
+                                                                <option value="  IM:Isle of Man  ">  IM:Isle of Man  </option>
+                                                                <option value="  IL:Israel   ">  IL:Israel   </option>
+                                                                <option value="  IT:Italy    ">  IT:Italy    </option>
+                                                                <option value="  JM:Jamaica  ">  JM:Jamaica  </option>
+                                                                <option value="  JP:Japan    ">  JP:Japan    </option>
+                                                                <option value="  JE:Jersey   ">  JE:Jersey   </option>
+                                                                <option value="  JO:Jordan   ">  JO:Jordan   </option>
+                                                                <option value="  KZ:Kazakhstan   ">  KZ:Kazakhstan   </option>
+                                                                <option value="  KE:Kenya    ">  KE:Kenya    </option>
+                                                                <option value="  KI:Kiribati ">  KI:Kiribati </option>
+                                                                <option value="  KP:Korea, Democratic People's Republic of   ">  KP:Korea, Democratic People's Republic of   </option>
+                                                                <option value="  KR:Korea, Republic of   ">  KR:Korea, Republic of   </option>
+                                                                <option value="  KW:Kuwait   ">  KW:Kuwait   </option>
+                                                                <option value="  KG:Kyrgyzstan   ">  KG:Kyrgyzstan   </option>
+                                                                <option value="  LA:Lao People's Democratic Republic ">  LA:Lao People's Democratic Republic </option>
+                                                                <option value="  LV:Latvia   ">  LV:Latvia   </option>
+                                                                <option value="  LB:Lebanon  ">  LB:Lebanon  </option>
+                                                                <option value="  LS:Lesotho  ">  LS:Lesotho  </option>
+                                                                <option value="  LR:Liberia  ">  LR:Liberia  </option>
+                                                                <option value="  LY:Libyan Arab Jamahiriya   ">  LY:Libyan Arab Jamahiriya   </option>
+                                                                <option value="  LI:Liechtenstein    ">  LI:Liechtenstein    </option>
+                                                                <option value="  LT:Lithuania    ">  LT:Lithuania    </option>
+                                                                <option value="  LU:Luxembourg   ">  LU:Luxembourg   </option>
+                                                                <option value="  MO:Macao    ">  MO:Macao    </option>
+                                                                <option value="  MK:Macedonia The Former Yugoslav Republic of ">  MK:Macedonia The Former Yugoslav Republic of </option>
+                                                                <option value="  MG:Madagascar   ">  MG:Madagascar   </option>
+                                                                <option value="  MW:Malawi   ">  MW:Malawi   </option>
+                                                                <option value="  MY:Malaysia ">  MY:Malaysia </option>
+                                                                <option value="  MV:Maldives ">  MV:Maldives </option>
+                                                                <option value="  ML:Mali ">  ML:Mali </option>
+                                                                <option value="  MT:Malta    ">  MT:Malta    </option>
+                                                                <option value="  MH:Marshall Islands ">  MH:Marshall Islands </option>
+                                                                <option value="  MQ:Martinique   ">  MQ:Martinique   </option>
+                                                                <option value="  MR:Mauritania   ">  MR:Mauritania   </option>
+                                                                <option value="  MU:Mauritius    ">  MU:Mauritius    </option>
+                                                                <option value="  YT:Mayotte  ">  YT:Mayotte  </option>
+                                                                <option value="  MX:Mexico   ">  MX:Mexico   </option>
+                                                                <option value="  FM:Micronesia, Federated States of  ">  FM:Micronesia, Federated States of  </option>
+                                                                <option value="  MD:Moldova, Republic of ">  MD:Moldova, Republic of </option>
+                                                                <option value="  MC:Monaco   ">  MC:Monaco   </option>
+                                                                <option value="  MN:Mongolia ">  MN:Mongolia </option>
+                                                                <option value="  ME:Montenegro   ">  ME:Montenegro   </option>
+                                                                <option value="  MS:Montserrat   ">  MS:Montserrat   </option>
+                                                                <option value="  MA:Morocco  ">  MA:Morocco  </option>
+                                                                <option value="  MZ:Mozambique   ">  MZ:Mozambique   </option>
+                                                                <option value="  MM:Myanmar  ">  MM:Myanmar  </option>
+                                                                <option value="  NA:Namibia  ">  NA:Namibia  </option>
+                                                                <option value="  NR:Nauru    ">  NR:Nauru    </option>
+                                                                <option value="  NP:Nepal    ">  NP:Nepal    </option>
+                                                                <option value="  NL:Netherlands  ">  NL:Netherlands  </option>
+                                                                <option value="  AN:Netherlands Antilles ">  AN:Netherlands Antilles </option>
+                                                                <option value="  NC:New Caledonia    ">  NC:New Caledonia    </option>
+                                                                <option value="  NZ:New Zealand  ">  NZ:New Zealand  </option>
+                                                                <option value="  NI:Nicaragua    ">  NI:Nicaragua    </option>
+                                                                <option value="  NE:Niger    ">  NE:Niger    </option>
+                                                                <option value="  NG:Nigeria  ">  NG:Nigeria  </option>
+                                                                <option value="  NU:Niue ">  NU:Niue </option>
+                                                                <option value="  NF:Norfolk Island   ">  NF:Norfolk Island   </option>
+                                                                <option value="  MP:Northern Mariana Islands ">  MP:Northern Mariana Islands </option>
+                                                                <option value="  NO:Norway   ">  NO:Norway   </option>
+                                                                <option value="  OM:Oman ">  OM:Oman </option>
+                                                                <option value="  PK:Pakistan ">  PK:Pakistan </option>
+                                                                <option value="  PW:Palau    ">  PW:Palau    </option>
+                                                                <option value="  PS:Palestinian Territory, Occupied  ">  PS:Palestinian Territory, Occupied  </option>
+                                                                <option value="  PA:Panama   ">  PA:Panama   </option>
+                                                                <option value="  PG:Papua New Guinea ">  PG:Papua New Guinea </option>
+                                                                <option value="  PY:Paraguay ">  PY:Paraguay </option>
+                                                                <option value="  PE:Peru ">  PE:Peru </option>
+                                                                <option value="  PH:Philippines  ">  PH:Philippines  </option>
+                                                                <option value="  PN:Pitcairn ">  PN:Pitcairn </option>
+                                                                <option value="  PL:Poland   ">  PL:Poland   </option>
+                                                                <option value="  PT:Portugal ">  PT:Portugal </option>
+                                                                <option value="  PR:Puerto Rico  ">  PR:Puerto Rico  </option>
+                                                                <option value="  QA:Qatar    ">  QA:Qatar    </option>
+                                                                <option value="  RE:Reunion  ">  RE:Reunion  </option>
+                                                                <option value="  RO:Romania  ">  RO:Romania  </option>
+                                                                <option value="  RU:Russian Federation   ">  RU:Russian Federation   </option>
+                                                                <option value="  RW:Rwanda   ">  RW:Rwanda   </option>
+                                                                <option value="  SH:Saint Helena ">  SH:Saint Helena </option>
+                                                                <option value="  KN:Saint Kitts and Nevis    ">  KN:Saint Kitts and Nevis    </option>
+                                                                <option value="  LC:Saint Lucia  ">  LC:Saint Lucia  </option>
+                                                                <option value="  PM:Saint Pierre and Miquelon    ">  PM:Saint Pierre and Miquelon    </option>
+                                                                <option value="  VC:Saint Vincent and The Grenadines ">  VC:Saint Vincent and The Grenadines </option>
+                                                                <option value="  WS:Samoa    ">  WS:Samoa    </option>
+                                                                <option value="  SM:San Marino   ">  SM:San Marino   </option>
+                                                                <option value="  ST:Sao Tome and Principe    ">  ST:Sao Tome and Principe    </option>
+                                                                <option value="  SA:Saudi Arabia ">  SA:Saudi Arabia </option>
+                                                                <option value="  SN:Senegal  ">  SN:Senegal  </option>
+                                                                <option value="  RS:Serbia   ">  RS:Serbia   </option>
+                                                                <option value="  SC:Seychelles   ">  SC:Seychelles   </option>
+                                                                <option value="  SL:Sierra Leone ">  SL:Sierra Leone </option>
+                                                                <option value="  SG:Singapore    ">  SG:Singapore    </option>
+                                                                <option value="  SK:Slovakia ">  SK:Slovakia </option>
+                                                                <option value="  SI:Slovenia ">  SI:Slovenia </option>
+                                                                <option value="  SB:Solomon Islands  ">  SB:Solomon Islands  </option>
+                                                                <option value="  SO:Somalia  ">  SO:Somalia  </option>
+                                                                <option value="  ZA:South Africa ">  ZA:South Africa </option>
+                                                                <option value="  GS:South Georgia and The South Sandwich Islands ">  GS:South Georgia and The South Sandwich Islands </option>
+                                                                <option value="  ES:Spain    ">  ES:Spain    </option>
+                                                                <option value="  LK:Sri Lanka    ">  LK:Sri Lanka    </option>
+                                                                <option value="  SD:Sudan    ">  SD:Sudan    </option>
+                                                                <option value="  SR:Suriname ">  SR:Suriname </option>
+                                                                <option value="  SJ:Svalbard and Jan Mayen   ">  SJ:Svalbard and Jan Mayen   </option>
+                                                                <option value="  SZ:Swaziland    ">  SZ:Swaziland    </option>
+                                                                <option value="  SE:Sweden   ">  SE:Sweden   </option>
+                                                                <option value="  CH:Switzerland  ">  CH:Switzerland  </option>
+                                                                <option value="  SY:Syrian Arab Republic ">  SY:Syrian Arab Republic </option>
+                                                                <option value="  TW:Taiwan, Province of China    ">  TW:Taiwan, Province of China    </option>
+                                                                <option value="  TJ:Tajikistan   ">  TJ:Tajikistan   </option>
+                                                                <option value="  TZ:Tanzania, United Republic of ">  TZ:Tanzania, United Republic of </option>
+                                                                <option value="  TH:Thailand ">  TH:Thailand </option>
+                                                                <option value="  TL:Timor-leste  ">  TL:Timor-leste  </option>
+                                                                <option value="  TG:Togo ">  TG:Togo </option>
+                                                                <option value="  TK:Tokelau  ">  TK:Tokelau  </option>
+                                                                <option value="  TO:Tonga    ">  TO:Tonga    </option>
+                                                                <option value="  TT:Trinidad and Tobago  ">  TT:Trinidad and Tobago  </option>
+                                                                <option value="  TN:Tunisia  ">  TN:Tunisia  </option>
+                                                                <option value="  TR:Turkey   ">  TR:Turkey   </option>
+                                                                <option value="  TM:Turkmenistan ">  TM:Turkmenistan </option>
+                                                                <option value="  TC:Turks and Caicos Islands ">  TC:Turks and Caicos Islands </option>
+                                                                <option value="  TV:Tuvalu   ">  TV:Tuvalu   </option>
+                                                                <option value="  UG:Uganda   ">  UG:Uganda   </option>
+                                                                <option value="  UA:Ukraine  ">  UA:Ukraine  </option>
+                                                                <option value="  AE:United Arab Emirates ">  AE:United Arab Emirates </option>
+                                                                <option value="  GB:United Kingdom   ">  GB:United Kingdom   </option>
+                                                                <option value="  US:United States    ">  US:United States    </option>
+                                                                <option value="  UM:United States Minor Outlying Islands ">  UM:United States Minor Outlying Islands </option>
+                                                                <option value="  UY:Uruguay  ">  UY:Uruguay  </option>
+                                                                <option value="  UZ:Uzbekistan   ">  UZ:Uzbekistan   </option>
+                                                                <option value="  VU:Vanuatu  ">  VU:Vanuatu  </option>
+                                                                <option value="  VE:Venezuela    ">  VE:Venezuela    </option>
+                                                                <option value="  VN:Viet Nam ">  VN:Viet Nam </option>
+                                                                <option value="  VG:Virgin Islands, British  ">  VG:Virgin Islands, British  </option>
+                                                                <option value="  VI:Virgin Islands, U.S. ">  VI:Virgin Islands, U.S. </option>
+                                                                <option value="  WF:Wallis and Futuna    ">  WF:Wallis and Futuna    </option>
+                                                                <option value="  EH:Western Sahara   ">  EH:Western Sahara   </option>
+                                                                <option value="  YE:Yemen    ">  YE:Yemen    </option>
+                                                                <option value="  ZM:Zambia   ">  ZM:Zambia   </option>
+                                                                <option value="  ZW:Zimbabwe ">  ZW:Zimbabwe </option>
+
+                                                        </select>     
+                                                                                                    
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                       
+                                                        <label class="fieldlabels">State/Provinces:</label>
+                                                        <input type="text" name="text" placeholder="Enter Permanent Resident Address">  
+                                                                                                  
+                                                    </div>
+                                                    <script>
+                                                        // document.getElementById('candidatecounty').addEventListener('change', function() {
+                                                        //     var examSection = document.getElementById('exam-section');
+                                                        //     if (this.value !== "Please select Country *") {
+                                                        //         examSection.style.display = 'block';
+                                                        //     } else {
+                                                        //         examSection.style.display = 'none';
+                                                        //     }
+                                                        // });
+                                                    </script>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels" >City:</label>
+                                                        <input type="text" name="text" placeholder="Enter Permanent Resident Address">  
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-8 "id="exam-section" style="display: none;">
+                                                        <label class="fieldlabels" for="">Select Exam:*</label>
+                                                        <select class="form-control" id="candidateexam">
+                                                            <option value="Please select Country  *" disabled selected>Please select Exam *</option>
+                                                            
+                                                            <option value="248">Beingcert Certified Data Analyst</option>
+                                                            <option value="232">Beingcert Certified Business Analyst</option>
+                                                            <option value="256">Beingcert Certified International Purchasing/Procurement Professional</option>
+                                                            <option value="257">Beingcert Certified Business Continuity Professional</option>
+                                                            <option value="259">Beingcert Certified Business Process Model Notation</option>
+                                                            <option value="253">Beingcert Certified Customer Experience Professional</option>
+                                                            <option value="230">Beingcert Certified Cloud Security Professional</option>
+                                                            <option value="247">Beingcert Certified Cyber Security Professional</option>
+                                                            <option value="251">Beingcert Certified Pentest Professional</option>
+                                                            <option value="252">Beingcert Certified SOC Analyst Certification</option>
+                                                            <option value="231">Beingcert Certified Digital Marketing Professional</option>
+                                                            <option value="218">Beingcert Certified AI Professional</option>
+                                                            <option value="219">Beingcert Certified IoT Professional</option>
+                                                            <option value="221">Beingcert Certified Blockchain Professional</option>                                                         
+                                                        </select>  
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <label class="fieldlabels">Fees</label>
+                                                        <input type="text" placeholder="$150" disabled>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 mr-5" style="padding: 30px 30px 14px 30px; border: 1px solid #ddd; box-shadow: 5px 5px 2px 2px grey;">
+                                                        <div class="">
+                                                            <h4 class="text-center pb-3">Training Partner Near By You (16)</h4>
+                                                        </div>
+                                                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                <div class="carousel-item active">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Alvin Integrated Services</h5>
+                                                                                    <p class="card-text">RZ42, Street No 25B, Palam, New Delhi - 110045, India</p>                                                            
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Alvin Integrated Services</h5>
+                                                                                    <p class="card-text">325A/2-A, First Floor, Munirka Village, Delhi, 110067, India</p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Genetech Training and Development </h5>
+                                                                                    <p class="card-text">Office 154 Building 79, ROAD 2802, AL SEEF 0428,</p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">ADN Eduservices Ltd</h5>
+                                                                                    <p class="card-text">Malancha Green,House#58,Road#3/A,Dhanmondi, dhaka  </p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6" >
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Bdtask Limited</h5>
+                                                                                    <p class="card-text">B-25, Mannan Plaza, 4th Floor, Khilkhet  </p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6" >
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Headquarter (BD) Limited</h5>
+                                                                                    <p class="card-text">Kohinoor Tower-1, Level-5, House 7, Road No. 7, Gulshan 1, Dhaka 1212  </p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6" >
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Johnson It Institute </h5>
+                                                                                    <p class="card-text">361/A Mogbazar Dhaka -1217  </p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6" >
+                                                                            <div class="card" style="border-top: 3px solid #007388;">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">zSpace Limited</h5>
+                                                                                    <p class="card-text">F Hoque Tower, 107 CR Dutta Road, Level 03, Panthapath </p>
+                                                                                    <p type="button" data-bs-toggle="modal" data-bs-target="#myModal">Read more</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <!-- Indicators -->
+                                                            <!-- <div class="carousel-indicators" style="margin-bottom: 0.0;">
+                                                                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: black;"></button>
+                                                                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: black;"></button>
+                                                            </div> -->
+                                                        
+                                                            <!-- Controls -->
+                                                             <div class="d-flex justify-content-center pt-2 " >
+                                                                <button class="carousel-control-prev mr-2" style=" margin-right: auto; background-color: black; width: 50px; height: 50px; border-radius: 50%; box-sizing: content-box; position: static;  " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                    <span class="visually-hidden">Previous</span>
+                                                                </button>
+                                                                <button class="carousel-control-next pl-4" style="background-color: black; width: 50px; height: 50px; border-radius: 50%; box-sizing: content-box; position: static; float: right; " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span class="visually-hidden">Next</span>
+                                                                </button>
+                                                             </div>
+                                                            
+                                                        </div>
+                                                        
+                                                       </div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                                <!-- <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Test Center Hardware and Techanical Requirements </h2>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Processor 2.33 GHz or faster x86 compatible processor   </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >RAM – 2GB or more  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >HDD Space – 20 GB or more  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Monitor- 17” or more  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Operating System Win 10 and Win 11
+                                                        </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Browser google chrome,edge etc  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Internet speed: download (2 mbps), upload (1 mbps) or higher  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Test Center Hardware and Techanical Requirements </h2>
+                                                        <p><span style="font-weight: bold;">Note*:</span> Please specify your monitoring method during exam</p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                       
+                                                        <label class="form-check" for="" >Physical Monitoring in testing room  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Viewing window </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >CCTV surveillance </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                </div>
+                                                <div class="row" >
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Physical Description of Testing Center</h2>
+                                                        
+                                                    </div>
+                                                </div>
+            
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <p><span style="font-weight: bold;">Note*:</span> Are you ready to submit pictures and video ? : (
+                                                            <input type="radio" name="uploadVedios" value="Y" id="yesRadio"> Yes/
+                                                            <input type="radio" name="uploadVedios" value="N" id="noRadio"> No
+                                                        ) </p>
+                                                        <div class="form-group showbutton" id="videoDiv" >
+                                            
+                                                            <input multiple="multiple" class="fileupload-input" accept="video/*,image/*" id="fuVideo" type="file" name="files[]" aria-labelledby="label_81" aria-hidden="true" tabindex="-1">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                       
+                                                        <label class="form-check" for="" >Test Delivery Area </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Lockers </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Reception  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Test Delivery Machine </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Building Exterior </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Building with Company Board                                            </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Parking       </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Waiting Area  </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Entrance of building   </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Entrance of Testing Room   </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">                                           
+                                                        <label class="form-check" for="" >Floor Plan</label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>                                            
+                                                    </div>
+                                                </div>
+                                                <div class="row" >
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2 class="fs-title">Accommodations   </h2>
+                                                        <p>Certaining is committed to providing access for all individuals with disabilities. In order to assist candidates with disabilities, please provide the following information:
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Does your facility have access for candidates with disabilities?      </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>  
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Would you be willing to shut down to provide private testing?    </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>  
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="form-check" for="" >Do you have a separate room available and equipped with a test delivery workstation that can accommodate candidates with disabilities?
+                                                        </label>
+                                                        <div class="sel_wrap">
+                                                            <input type="radio" name="terms32" value="Y"><span class="check_span">Yes</span>
+                                                            <input type="radio" name="terms32" value="N"><span class="check_span">No</span>
+                                                           
+                                                        </div>
+                                                        <hr>  
+                                                    </div>
+                                                </div>                                -->
+                                            </div>
+                                            <input type="button" name="next" class="next action-button" value="Next"/>
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="form-card">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Agreement Contact Personnel:</h2>
+                                                        <p><span style="font-weight: bold;">Note*:</span> Must be authorized to sign agreements on behalf of your company</p>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h2 class="steps">Step 3 - 4</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Name</label>
+                                                        <input type="text" name="text" placeholder="Name*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Mobile Number</label>
+                                                        <input type="number" name="number" placeholder="Mobile number*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Email Address</label>
+                                                        <input type="email" name="email" placeholder="Email Address*"> 
+                                                    </div>
+            
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2 class="fs-title">Technical Personnel Contact Information </h2>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Name</label>
+                                                        <input type="text" name="text" placeholder="Name*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Mobile Number</label>
+                                                        <input type="number" name="number" placeholder="Mobile number*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Email Address</label>
+                                                        <input type="email" name="email" placeholder="Email Address*"> 
+                                                    </div>
+            
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2 class="fs-title">Testing Administrator Contact-2/ Proctor Contact-2                                            </h2>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Name</label>
+                                                        <input type="text" name="text" placeholder="Name*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Mobile Number</label>
+                                                        <input type="number" name="number" placeholder="Mobile number*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Email Address</label>
+                                                        <input type="email" name="email" placeholder="Email Address*"> 
+                                                    </div>
+            
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2 class="fs-title">Finance / Billing Contact Information </h2>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Name</label>
+                                                        <input type="text" name="text" placeholder="Name*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Mobile Number</label>
+                                                        <input type="number" name="number" placeholder="Mobile number*"> 
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <label class="fieldlabels" >Email Address</label>
+                                                        <input type="email" name="email" placeholder="Email Address*"> 
+                                                    </div>
+            
+                                                </div>                                 
+                                            </div>
+                                            <input type="button" name="next" class="next action-button" value="Next"/>
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="form-card">
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        <h2 class="fs-title">Select Exam:</h2>                                            
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h2 class="steps">Step 4 - 4</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                                        <span class="all">
+                                                            <input type="checkbox" id="selectAll" onclick="toggleSelectAll()" >
+                                                            Select All
+                                                        </span>
+                                                        <div class="exam_center_list">
+                                                            <ul>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" >
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Beingcert Certified SOC Analyst Certification</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certified Test Center Administrator </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Cyber Security Professional  </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Data Analyst </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Full Stack Developer </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Machine Learning Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Pentest Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Customer Experience Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Business Continuity Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Scrum Developer </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified AI Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified IoT Professional </span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Blockchain Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Python Developer</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Software Testing Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified DevOps Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Web Developer</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified  Cloud Security Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Digital Marketing Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Business Analyst</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified ISO/IEC 27001: Foundation</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified  ISO/IEC 27001 : 2022 Lead Auditor</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified ISO/IEC 27001: Lead Implementor</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified ISO 9001: Foundation</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Lean Six Sigma Green Belt Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified  Lean Six Sigma Black Belt Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Lean Six Sigma Yellow Belt Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Project Management Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Scrum Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Big Data Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Hadoop Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Secure Coding Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Scrum Master</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified International Purchasing/Procurement Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified  Linux Professional</span>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox" name="interests[]" class="checkbox" id="checkbox">
+                                                                    <input type="hidden" id="hdnExamId" value="252">
+                                                                    <span>Certaining Certified Business Process Model Notation</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    
+            
+                                                </div>
+                                                <div class="row" style="margin-bottom: 3rem;">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                        <h2 class="fs-title">Photo Submission </h2>
+                                                        <p>The application will only be considered complete once all required photos are received. Refer to the Photo Checklist for guidance on the necessary content for the photos. </p>
+                                                        <p>Ensure that each photo is appropriately labeled. For instance, if providing a photo of the check-in area, label the file accordingly as "check-in area".
+                                                         </p>
+                                                         <p>The application remains incomplete until all photos are provided.
+                                                         </p>
+                                                         <p>After submission, a confirmation email will be sent containing an URL.
+                                                         </p>
+                                                         <p>Please attach photos, checklist and proof of business registration and email to: channelsales@certaining.com
+                                                        </p>
+                                                        <p><span style="font-weight: bold;">Note*:</span> Include your Application ID on the email/letter so that we can process your application within time.</p>
+                                                        <p>By submitting the Beingcert Test Center Application Form, I acknowledge that I have carefully read and understood all provided instructions. I agree to diligently complete the form accurately. I understand that Beingcert reserves the right to decline any new application. I authorize Beingcert to verify the accuracy of the information provided and confirm that I have obtained consent from relevant parties. Additionally, I consent to the collection, use, transfer, and disclosure of my personal data in accordance with Beingcert's Terms of Service and Privacy and Cookies Policy. *
+                                                        </p>
+                                                        <input id="cbagreed" type="checkbox" name="terms" value="Y">
+                                                        <span class="check_span">Agreed</span>
+                                                    </div>                                    
+                                                </div>
+                                                                               
+                                            </div>
+                                            <input type="button" name="next" class="next action-button" value="Submit"/>
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+                <!--------Reshedule New Exam ------->
+                <div class="student-panel" id="Re-Shedule-Exam">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aperiam quos rem nobis nam voluptatem quaerat. Velit ducimus, accusamus rerum fuga iste recusandae dignissimos reiciendis ratione doloribus amet veritatis ipsam.
+                    </p>
+                </div>
+                <!-------Certificate & score Report---------->
+                <div class="student-panel" id="score-report">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo repudiandae est sunt rem deserunt culpa doloremque saepe! Numquam dolores assumenda maxime error incidunt quas aut, maiores molestiae quod perferendis unde vero sint esse, impedit aperiam? Accusantium commodi nulla fugit quas vitae, ipsa magni obcaecati, molestias aperiam, architecto officia culpa inventore numquam asperiores quam distinctio quis ea facilis! Aut dolorem veritatis assumenda optio! Facilis, error molestiae nisi rerum fugiat aliquam tenetur laboriosam repellendus atque magni. Officiis velit id aliquid, repellat iusto rem porro dolore autem repudiandae cum, facere deserunt tempore molestias odit soluta harum, totam saepe incidunt! Est quia, tempore minima blanditiis nihil impedit vel dolorum. Corporis porro enim doloribus! Enim quisquam magnam est itaque ratione voluptates consequatur. Sed ea voluptatum dolores rerum nesciunt quas voluptate temporibus reiciendis adipisci. Exercitationem architecto eveniet, mollitia quod debitis, corrupti cum consequatur obcaecati voluptas ab maxime! Optio, perspiciatis eaque distinctio nemo esse quasi reprehenderit exercitationem rem consectetur assumenda doloribus sequi quae odio repellendus ea, debitis fugit fuga asperiores error. Odio maiores sit illum enim doloremque ratione, neque facere quisquam autem suscipit, iure sint omnis nostrum. Ratione et alias, iusto quaerat dolores neque nemo, aspernatur eaque tempore ipsam fugiat earum animi, doloribus dolor. Eligendi, dolores quo.</p>
+                </div>
+                <!--------Change Password----------->
+                <div class="student-panel" id="change-password ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore laboriosam, optio aspernatur sunt nemo autem cumque in dignissimos sequi nisi fugit iste, facere amet assumenda ratione debitis aliquam? Aperiam a velit et provident quis magnam accusamus tenetur. Praesentium minus nobis voluptates tempora nam tenetur beatae vero consequuntur repudiandae ratione nemo, labore, soluta repellendus iusto id distinctio accusamus alias ab recusandae dignissimos. Ipsum tempora voluptate maiores facere cumque officia asperiores iste voluptas nisi. Pariatur quo quam labore a natus corporis iste, cumque ipsa amet nihil, similique architecto praesentium deleniti. Repellendus saepe nostrum nam delectus optio at quia eveniet, molestiae numquam dolorem consequuntur ducimus ex explicabo repudiandae omnis praesentium, similique quos enim neque! Voluptas sapiente ipsum fugit animi inventore ab, est facere consequuntur doloremque autem modi sed laboriosam fuga eos aspernatur maiores quo ipsa facilis vitae possimus. Odio nesciunt, accusamus iste officia odit tenetur quod reprehenderit velit nulla, consequuntur dolorum maxime quasi. Quod, illo ex magnam quos dolorum amet mollitia maxime aperiam, omnis sint a sed repudiandae officia est repellendus. Asperiores quis nesciunt nihil a rerum tenetur numquam non dicta minima suscipit, recusandae tempore ea illum, ad rem molestias vel voluptates neque fuga fugit corrupti itaque totam. Ab labore quis eligendi fugiat.</p>
+                </div>
+                <!------Support--------->
+                <div class="student-panel" id="support">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis praesentium mollitia voluptate repellendus sed, quas esse asperiores expedita illum ex hic voluptatem tempore adipisci. Officia sequi hic delectus necessitatibus placeat mollitia pariatur eligendi voluptatibus, quia, saepe iure cum itaque sint debitis quos commodi odio, reprehenderit optio cupiditate? Architecto neque autem recusandae ea! Nesciunt reprehenderit neque ipsum cumque animi voluptate, excepturi quam sunt aliquam! Modi accusamus eos doloribus molestias quis adipisci quidem aperiam corrupti odit praesentium voluptatum impedit vel cum labore ad vero quas temporibus, quo expedita ratione explicabo magnam magni consequatur. Deserunt itaque placeat sed sequi? Dolores, ut. Aperiam beatae repellat est. Aliquam qui quo officiis sed nam quasi illum cumque, itaque ad placeat quae quis dolores temporibus consectetur fugit illo ab sunt dolorum assumenda iure. Unde eaque iste tenetur repellendus mollitia modi molestias perferendis, atque vitae saepe nesciunt reprehenderit ducimus similique accusantium illum eligendi quis iure illo. Ipsa quaerat architecto voluptatibus ex minus, distinctio maiores et facilis ut, facere earum quo incidunt quis voluptatem iusto quibusdam ab dolore aliquam molestias! Blanditiis aspernatur nobis optio illo beatae architecto veritatis cumque, a numquam excepturi sequi qui reiciendis. Iste ipsum cum tenetur! Vitae quibusdam quasi ullam perferendis commodi odio excepturi ducimus placeat!</p>
+                </div>
+                <!-------Logout---------->
+                <div class="student-panel" >
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid possimus molestiae tempore suscipit nisi tempora saepe ipsa dolorum a ipsam nemo, culpa vitae doloribus quos, maxime et laudantium exercitationem aspernatur eos voluptatum distinctio. Ea voluptate quasi deserunt itaque commodi, odit vero veniam corporis in exercitationem dolorem architecto ex nihil aut et sint omnis suscipit quaerat! Deserunt a illo quam provident doloremque officia, optio similique? A labore molestias autem dolorum porro, recusandae mollitia quidem asperiores quibusdam laboriosam nisi officia sit deleniti accusantium ducimus illo ipsam beatae explicabo possimus quod unde cumque itaque id. Id magnam eaque culpa natus ipsum consequuntur laboriosam incidunt blanditiis obcaecati quo enim, quibusdam magni perferendis omnis quos perspiciatis fuga cupiditate velit porro assumenda iusto doloribus dolores temporibus. Doloremque itaque in earum molestiae, atque dolor aliquam ex eligendi, id voluptatibus incidunt assumenda aliquid aperiam inventore qui quisquam accusamus officia reiciendis reprehenderit nam sed rerum magni. Sed possimus, culpa aspernatur, saepe nobis obcaecati ullam voluptates odio eos dolor ipsum consequatur molestias perferendis blanditiis! Dolores iusto illum magnam facilis aspernatur voluptates ex recusandae iure obcaecati ullam? Quas eum eaque quibusdam ducimus error, neque earum dignissimos voluptatibus quaerat dolores ipsa nesciunt consequatur dicta quos assumenda sed, perferendis ad accusantium rerum obcaecati repellat, totam iure culpa? Non amet magnam, eos doloremque provident qui odit at esse cumque aliquid error impedit temporibus deleniti consequuntur nulla suscipit corrupti distinctio. Ea cupiditate excepturi deleniti dolorem mollitia. Nihil voluptate suscipit corporis modi dolores. Consequuntur, fuga ut. Delectus dolore facere veritatis reiciendis tempora ullam pariatur facilis, illum, rerum quos vel nesciunt atque suscipit laudantium eligendi nihil assumenda impedit inventore rem. Delectus nam aperiam earum, dolor sapiente adipisci, minus magnam vel provident quam inventore, repellendus asperiores accusantium est error! Aliquid dolor laboriosam, quidem tempora, similique, eaque rerum nulla voluptatem aspernatur praesentium consequuntur voluptas quas molestias necessitatibus eum velit.</p>
+                </div>
               </div>
               
         </section>
@@ -759,4 +2177,12 @@
         </div>
     </footer>
 </body>
-    
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="js/common.js"></script>
+</html>

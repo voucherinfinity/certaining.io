@@ -2014,3 +2014,10 @@ ul {
     outline: 0;
     margin-right: 11px;
 }
+
+.student-panel {
+    display: none;
+}
+.active {
+    display: block;
+}
