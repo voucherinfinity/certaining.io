@@ -239,19 +239,35 @@ $('#splitbutton').click(function(e) {
 
 
 //-----login form-----//
-document.getElementById('btnradio1').addEventListener('change', function() {
-    if (this.checked) {
-        document.getElementById('loginForm').style.display = 'block';
-        document.getElementById('registerForm').style.display = 'none';
-    }
+// document.getElementById('btnradio1').addEventListener('change', function() {
+//     if (this.checked) {
+//         document.getElementById('loginForm').style.display = 'block';
+//         document.getElementById('registerForm').style.display = 'none';
+//     }
+// });
+
+// document.getElementById('btnradio2').addEventListener('change', function() {
+//     if (this.checked) {
+//         document.getElementById('loginForm').style.display = 'none';
+//         document.getElementById('registerForm').style.display = 'block';
+//     }
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('btnradio1').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+    });
+
+    document.getElementById('btnradio2').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+    });
 });
 
-document.getElementById('btnradio2').addEventListener('change', function() {
-    if (this.checked) {
-        document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('registerForm').style.display = 'block';
-    }
-});
 
 
 
@@ -289,11 +305,40 @@ function toggleFields() {
 }
 
 //--------------candidate panel examdropdown hinde --------//
-document.getElementById('candidatecounty').addEventListener('change', function() {
-    var examSection = document.getElementById('exam-section');
-    if (this.value !== "Please select Country *") {
-        examSection.style.display = 'block';
-    } else {
-        examSection.style.display = 'none';
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('candidatecounty').addEventListener('change', function() {
+        var examSection = document.getElementById('exam-section');
+        if (this.value !== "Please select Country *") {
+            examSection.style.display = 'block';
+        } else {
+            examSection.style.display = 'none';
+        }
+    });
+});
+
+
+
+//----------candidate panel exam fess hide ------//
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('candidateexam').addEventListener('change', function() {
+        var examSection = document.getElementById('exam-fees');
+        if (this.value !== "Please select Country *") {
+            examSection.style.display = 'block';
+        } else {
+            examSection.style.display = 'none';
+        }
+    });
+});
+
+
+//--------- candidate panel test cneter hide -------//
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('candidateexam').addEventListener('change', function() {
+        var examSection = document.getElementById('candidate-test-center');
+        if (this.value !== "Please select Country *") {
+            examSection.style.display = 'block';
+        } else {
+            examSection.style.display = 'none';
+        }
+    });
 });
